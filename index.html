@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +11,40 @@
 <meta property="og:url" content="https://nexora-01-eg.github.io/">
 <link rel="canonical" href="https://nexora-01-eg.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2316263d'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23d8c39a' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
+<script>
+/* set language and theme before first paint (no flash) */
+(function(){try{
+var s=localStorage.getItem("ms-cv-lang");
+var l=s||((navigator.language||"en").toLowerCase().indexOf("ar")===0?"ar":"en");
+document.documentElement.lang=l;document.documentElement.dir=(l==="ar"?"rtl":"ltr");
+var t=localStorage.getItem("ms-cv-theme");
+if(t!=="dark"&&t!=="light"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";}
+document.documentElement.setAttribute("data-theme",t);
+}catch(e){}})();
+</script>
+<meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1713" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content · تخطَّ إلى المحتوى</a>
 
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="#top">Mohamed Sadek<span> ·</span> CV</a>
+    <a class="brand" href="#top"><span class="t-en">Mohamed Sadek<span> ·</span> CV</span><span class="t-ar">محمد صادق<span> ·</span> السيرة</span></a>
+    <button id="theme-toggle" class="lang-btn theme-btn" type="button" aria-pressed="false" aria-label="☾ الوضع الداكن · Dark mode" title="Light / Dark · فاتح / داكن"><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button>
+    <button id="lang-toggle" class="lang-btn" type="button" title="Switch language · تغيير اللغة"><span class="t-en" lang="ar" dir="rtl">عربي</span><span class="t-ar">English</span></button>
     <nav aria-label="Main">
       <ul>
-        <li><a href="#work">Selected Work</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#process">How I Build</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#archive">Archive</a></li>
+        <li><a href="#work"><span class="t-en">Selected Work</span><span class="t-ar">الأعمال المختارة</span></a></li>
+        <li><a href="#skills"><span class="t-en">Skills</span><span class="t-ar">المهارات</span></a></li>
+        <li><a href="#process"><span class="t-en">How I Build</span><span class="t-ar">كيف أعمل</span></a></li>
+        <li><a href="#education"><span class="t-en">Education</span><span class="t-ar">التعليم</span></a></li>
+        <li><a href="#contact"><span class="t-en">Contact</span><span class="t-ar">التواصل</span></a></li>
+        <li><a href="#archive"><span class="t-en">Archive</span><span class="t-ar">الأرشيف</span></a></li>
       </ul>
     </nav>
   </div>
@@ -40,39 +55,77 @@
   <!-- ================= HERO ================= -->
   <section class="hero" id="top" aria-labelledby="hero-name">
     <div class="wrap">
-      <p class="kicker">Portfolio &amp; CV — verified October 2026</p>
-      <h1 id="hero-name">Mohamed Sadek</h1>
-      <p class="role">AI-Assisted Digital Project Builder <em>— websites &amp; digital operations</em></p>
-      <p class="lede">
-        I build complete web projects end to end: brand sites, digital menus and ordering, and
-        storefronts — using AI-assisted workflows I have set up and refined myself. Then I document,
-        test, and improve them like products. My strongest current work is a coffee-brand ordering
-        platform with its own tested API.
-      </p>
-      <div class="meta">
-        <span>Shebin El-Kom, Menoufia, Egypt</span>
-        <a href="mailto:mohamed_sadek07@outlook.com">mohamed_sadek07@outlook.com</a>
-        <a href="tel:+201000025168">01000025168</a>
-        <a href="https://github.com/nexora-01-eg" rel="noopener">github.com/nexora-01-eg</a>
+      <div class="lang-en" lang="en" dir="ltr">
+        <p class="kicker rv">Portfolio &amp; CV — verified October 2026</p>
+        <h1 id="hero-name">Mohamed Sadek</h1>
+        <p class="role">AI-Assisted Digital Project Builder <em>— websites &amp; digital operations</em></p>
+        <p class="lede rv">
+          I build complete web projects end to end: brand sites, digital menus and ordering, and
+          storefronts — using AI-assisted workflows I have set up and refined myself. Then I document,
+          test, and improve them like products. My strongest current work is a coffee-brand ordering
+          platform with its own tested API.
+        </p>
+        <div class="meta rv">
+          <span>Shebin El-Kom, Menoufia, Egypt</span>
+          <a href="mailto:mohamed_sadek07@outlook.com">mohamed_sadek07@outlook.com</a>
+          <a href="tel:+201000025168">01000025168</a>
+          <a href="https://github.com/nexora-01-eg" rel="noopener">github.com/nexora-01-eg</a>
+        </div>
+        <div class="cta-row rv">
+          <a class="btn btn-solid" href="#work">View selected work</a>
+          <a class="btn btn-ghost" href="downloads/Mohamed-Sadek-ATS-Resume.pdf">Résumé (PDF)</a>
+          <a class="btn btn-ghost" href="downloads/Mohamed-Sadek-Portfolio-CV.pdf">Full portfolio CV (PDF)</a>
+        </div>
+        <div class="roles-strip rv">
+          <p class="label">Open to junior roles such as</p>
+          <ul>
+            <li>Junior Website Administrator</li>
+            <li>Website Content Administrator</li>
+            <li>Digital Operations Assistant</li>
+            <li>AI Operations Assistant</li>
+            <li>Digital Project Coordinator</li>
+            <li>Content &amp; Design Assistant</li>
+            <li>Data Entry &amp; Digital Data Operations</li>
+            <li>E-commerce Operations Assistant</li>
+            <li>Digital Research Assistant</li>
+          </ul>
+        </div>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-solid" href="#work">View selected work</a>
-        <a class="btn btn-ghost" href="downloads/Mohamed-Sadek-ATS-Resume.pdf">Résumé (PDF)</a>
-        <a class="btn btn-ghost" href="downloads/Mohamed-Sadek-Portfolio-CV.pdf">Full portfolio CV (PDF)</a>
-      </div>
-      <div class="roles-strip">
-        <p class="label">Open to junior roles such as</p>
-        <ul>
-          <li>Junior Website Administrator</li>
-          <li>Website Content Administrator</li>
-          <li>Digital Operations Assistant</li>
-          <li>AI Operations Assistant</li>
-          <li>Digital Project Coordinator</li>
-          <li>Content &amp; Design Assistant</li>
-          <li>Data Entry &amp; Digital Data Operations</li>
-          <li>E-commerce Operations Assistant</li>
-          <li>Digital Research Assistant</li>
-        </ul>
+      <div class="lang-ar" lang="ar" dir="rtl">
+        <p class="kicker rv">ملف أعمال وسيرة ذاتية — تم التحقق في أكتوبر 2026</p>
+        <h1>محمد صادق</h1>
+        <p class="role">باني مشاريع رقمية بمساعدة الذكاء الاصطناعي <em>— المواقع والتشغيل الرقمي</em></p>
+        <p class="lede rv">
+          أبني مشاريع ويب متكاملة من البداية للنهاية: مواقع لعلامات تجارية، منيوهات وأنظمة طلب،
+          ومتاجر إلكترونية — عبر مسارات عمل بمساعدة الذكاء الاصطناعي أعدّتها وحسّنتها بنفسي. ثم
+          أوثّق العمل وأختبره وحسّنه كأنه منتج حقيقي. أقوى أعمالي الحالية: منصة طلب لمقهى مع
+          واجهة برمجية (API) خاصة بها مُختبَرة بالكامل.
+        </p>
+        <div class="meta rv">
+          <span>شبين الكوم، المنوفية، مصر</span>
+          <a href="mailto:mohamed_sadek07@outlook.com">mohamed_sadek07@outlook.com</a>
+          <a href="tel:+201000025168" dir="ltr">01000025168</a>
+          <a href="https://github.com/nexora-01-eg" rel="noopener" dir="ltr">github.com/nexora-01-eg</a>
+        </div>
+        <div class="cta-row rv">
+          <a class="btn btn-solid" href="#work">استعرض الأعمال المختارة</a>
+          <a class="btn btn-ghost" href="downloads/Mohamed-Sadek-ATS-Resume.pdf">السيرة المختصرة (PDF)</a>
+          <a class="btn btn-ghost" href="downloads/Mohamed-Sadek-Portfolio-CV.pdf">السيرة الكاملة (PDF)</a>
+        </div>
+        <div class="roles-strip rv">
+          <p class="label">مناسب لوظائف مبتدئة مثل</p>
+          <ul>
+            <li>مسؤول مواقع مبتدئ</li>
+            <li>مسؤول محتوى المواقع</li>
+            <li>مساعد عمليات رقمية</li>
+            <li>مساعد عمليات ذكاء اصطناعي</li>
+            <li>منسّق مشاريع رقمية</li>
+            <li>مساعد محتوى وتصميم</li>
+            <li>إدخال بيانات وعمليات بيانات رقمية</li>
+            <li>مساعد عمليات تجارة إلكترونية</li>
+            <li>مساعد بحث رقمي</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -80,27 +133,53 @@
   <!-- ================= INTRO ================= -->
   <section aria-labelledby="intro-title">
     <div class="wrap">
-      <div class="section-head" id="intro-title">
-        <span class="no">00</span>
-        <h2>Introduction</h2>
+      <div class="lang-en" lang="en" dir="ltr">
+        <div class="section-head" id="intro-title">
+          <span class="no">00</span>
+          <h2>Introduction</h2>
+        </div>
+        <div class="intro-grid">
+          <p class="big rv">
+            Most of my work starts from a real problem: a menu that needs online ordering, a brand
+            that needs a site, a store that needs to sell. I <strong>plan the project</strong>, choose
+            the right level of technology — from a single fast HTML file to a full-stack platform —
+            and build it with AI-assisted tools organized into a personal workflow.
+          </p>
+          <div class="intro-side rv">
+            <p>
+              I am an undergraduate at the Faculty of Economics and Political Science, Cairo
+              University (expected graduation 2027), working independently from Shebin El-Kom.
+            </p>
+            <p>
+              I keep my claims honest: every skill below is backed by a project you can open, and
+              concept demos are labeled as concepts. What I can show is careful process — audits,
+              plans, tests, and iterations.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="intro-grid">
-        <p class="big">
-          Most of my work starts from a real problem: a menu that needs online ordering, a brand
-          that needs a site, a store that needs to sell. I <strong>plan the project</strong>, choose
-          the right level of technology — from a single fast HTML file to a full-stack platform —
-          and build it with AI-assisted tools organized into a personal workflow.
-        </p>
-        <div class="intro-side">
-          <p>
-            I am an undergraduate at the Faculty of Economics and Political Science, Cairo
-            University (expected graduation 2027), working independently from Shebin El-Kom.
+      <div class="lang-ar" lang="ar" dir="rtl">
+        <div class="section-head">
+          <span class="no">00</span>
+          <h2>مقدمة</h2>
+        </div>
+        <div class="intro-grid">
+          <p class="big rv">
+            معظم أعمالي تبدأ من مشكلة حقيقية: منيو يحتاج طلبًا أونلاين، علامة تجارية تحتاج موقعًا،
+            متجر يحتاج أن يبيع. <strong>أخطّط المشروع</strong>، وأختار المستوى المناسب من التقنية —
+            من ملف HTML سريع واحد إلى منصة متكاملة — وأبنيه بأدوات ذكاء اصطناعي منظمة في مسار عمل شخصي.
           </p>
-          <p>
-            I keep my claims honest: every skill below is backed by a project you can open, and
-            concept demos are labeled as concepts. What I can show is careful process — audits,
-            plans, tests, and iterations.
-          </p>
+          <div class="intro-side rv">
+            <p>
+              طالب جامعي في كلية الاقتصاد والعلوم السياسية، جامعة القاهرة (التخرج المتوقع 2027)،
+              أعمل بشكل مستقل من شبين الكوم.
+            </p>
+            <p>
+              ألتزم بالصدق في كل ما أعرضه: كل مهارة هنا مدعومة بمشروع يمكنك فتحه، وعروض المفاهيم
+              مُعلَّمة كمفاهيم. ما أستطيع إثباته هو العملية المنضبطة — تدقيقات وخطط واختبارات
+              وتحسينات متكررة.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -109,294 +188,541 @@
   <!-- ================= SELECTED WORK ================= -->
   <section id="work" aria-labelledby="work-title">
     <div class="wrap">
-      <div class="section-head" id="work-title">
-        <span class="no">01</span>
-        <h2>Selected Work</h2>
-        <span class="note">8 of 100+ repositories &amp; 30+ live builds — full list in the archive</span>
+      <div class="lang-en" lang="en" dir="ltr">
+        <div class="section-head" id="work-title">
+          <span class="no">01</span>
+          <h2>Selected Work</h2>
+          <span class="note">8 of 100+ repositories &amp; 30+ live builds — full list in the archive</span>
+        </div>
+
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">01</p>
+          <div>
+            <h3>AL-Diwan Coffee — بُن الديوان <span class="chip">Live · Full-stack</span></h3>
+            <p class="desc">
+              A cinematic Arabic coffee-brand storefront with online ordering — and the platform
+              behind it. I started with the storefront, audited its gaps myself, then built the
+              backend it was missing.
+            </p>
+            <ul class="facts">
+              <li>Storefront: Three.js, GSAP + ScrollTrigger, Lenis smooth scroll, WhatsApp checkout, cart, RTL Arabic.</li>
+              <li>Backend I built after a written audit: Cloudflare Workers API (Hono + D1 + Zod) with admin dashboard, orders and tracking.</li>
+              <li>Security &amp; reliability: PBKDF2 password hashing, session cookies, rate limiting, CSRF checks, idempotent order creation.</li>
+              <li>Verified by an integration test suite I wrote: 33 assertions plus a full 10-step end-to-end order journey.</li>
+              <li>9 project documents: audits, implementation plan, readiness and QA reports.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">Stack: HTML/CSS/JS · Three.js · GSAP · Cloudflare Workers · D1 · Zod</span>
+            <a href="https://nexora-01-eg.github.io/al-diwan-coffee/" rel="noopener">Open live site</a>
+            <a href="https://github.com/nexora-01-eg/al-diwan-coffee" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">02</p>
+          <div>
+            <h3>SHE — she.shoes <span class="chip">Live store</span></h3>
+            <p class="desc">
+              A women's shoes &amp; bags boutique on its own domain — the closest thing in my work to
+              a live production store. Built twice: a lightweight storefront that ships fast, and a
+              full Next.js codebase behind it.
+            </p>
+            <ul class="facts">
+              <li>Live storefront on a real domain (she.shoes), Arabic RTL, cash-on-delivery flow, WhatsApp contact.</li>
+              <li>Next.js 15 + Supabase codebase with product pages, checkout, orders, admin area and content collections.</li>
+              <li>Build safety: a guard script runs before every build; seed data verified by script.</li>
+              <li>Promotional video produced with a written 6-frame storyboard (1080×1920, 25s).</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">Stack: Next.js 15 · React 19 · Supabase · Cloudflare · Sharp image pipeline</span>
+            <a href="https://she.shoes/" rel="noopener">Open live store</a>
+            <a href="https://github.com/nexora-01-eg/she-website" rel="noopener">Codebase</a>
+          </div>
+        </article>
+
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">03</p>
+          <div>
+            <h3>NEXORA Platform <span class="chip">Live site</span></h3>
+            <p class="desc">
+              My own digital-services platform: visual identity, websites and stores, marketing and
+              sales, automation and AI — presented as one connected growth system.
+            </p>
+            <ul class="facts">
+              <li>Deployed on Vercel with fully static, self-contained pages (no framework needed to serve it).</li>
+              <li>Serves as the umbrella brand for my client-site and demo production.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">Stack: Static HTML/CSS · Vercel</span>
+            <a href="https://nexora01eg.vercel.app/" rel="noopener">Open live site</a>
+          </div>
+        </article>
+
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">04</p>
+          <div>
+            <h3>Mohamed Sadek Atlas <span class="chip">Personal OS</span></h3>
+            <p class="desc">
+              An interactive self-portrait: personal operating system × mind map × interactive
+              documentary. Every item is typed as <em>confirmed</em>, <em>interpretation</em>, or
+              <em>aspiration</em> — so nothing invented can present itself as fact.
+            </p>
+            <ul class="facts">
+              <li>Zero dependencies: vanilla JS + CSS + SVG, runs from static files with a tiny local server.</li>
+              <li>Data-driven: public JSON layers for profile, projects, skills, ideas — private data kept out of the bundle by design.</li>
+              <li>Knowledge-graph visualization of how I work and think.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">Stack: Vanilla JS · CSS · SVG · JSON data layers</span>
+            <a href="https://github.com/nexora-01-eg/mohamed-sadek-atlas" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">05</p>
+          <div>
+            <h3>Rollz Restaurant System <span class="chip">System case study</span></h3>
+            <p class="desc">
+              One restaurant brand treated as a system: a typed TypeScript codebase with research
+              notes and a 50-item development roadmap, plus three live ordering surfaces.
+            </p>
+            <ul class="facts">
+              <li>Codebase: TypeScript client, Drizzle ORM schema, migration setup.</li>
+              <li>Planning: research notes, location-map review, and a 50-development-ideas document.</li>
+              <li>Live surfaces: interactive QR menu, Rollz Fast brand site, Rollz Fries menu — all order via WhatsApp.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">Stack: TypeScript · Drizzle ORM · React</span>
+            <a class="link-gap" href="https://rollzqrmenu-jjayceny.manus.space/" rel="noopener">QR menu (live)</a>
+            <a href="https://github.com/nexora-01-eg/rollz-restaurant" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">06</p>
+          <div>
+            <h3>Nexora Client Sites <span class="chip">Client work</span></h3>
+            <p class="desc">
+              A production line for small-business websites: gyms, furniture showrooms, a spa, event
+              halls, offices, real estate. Each site is a fast single-file build generated from a
+              reusable template core I maintain.
+            </p>
+            <ul class="facts">
+              <li>13+ sites in the collection, with before/after comparison screenshots.</li>
+              <li>Template core derived from my Al-Diwan structure: swap one config file to re-brand a full cinematic site.</li>
+              <li>Built-in accessibility and motion-reduction support in the template itself.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">Stack: Single-file HTML/CSS/JS · Template pipeline</span>
+            <a href="https://github.com/nexora-01-eg/nexora-client-sites" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">07</p>
+          <div>
+            <h3>Sasha Cinema <span class="chip">Prototype</span></h3>
+            <p class="desc">
+              The most technically ambitious build in my work: a bridal fashion story told as a
+              7-scene film. Code complete and built; deployment pending.
+            </p>
+            <ul class="facts">
+              <li>Vite + React 18 + TypeScript with Three.js / React-Three-Fiber and custom GLSL shaders (silk, waves), GPU particles.</li>
+              <li>Careful engineering limits: capped device pixel ratio, CSS fallback when WebGL is unavailable, full <code>prefers-reduced-motion</code> support.</li>
+              <li>Per-scene SEO routing, bilingual content layer, keyboard and swipe navigation.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">Stack: React · TypeScript · Vite · Three.js/R3F · GLSL · GSAP · Lenis</span>
+            <span class="stack" style="margin-top:.55rem; display:block;">Code available on request — deployment pending</span>
+          </div>
+        </article>
+
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">08</p>
+          <div>
+            <h3>AI Promo Video Production <span class="chip">Capability</span></h3>
+            <p class="desc">
+              Storyboard-driven promotional videos produced with an AI video toolchain (HyperFrames):
+              written direction first, then motion, then render.
+            </p>
+            <ul class="facts">
+              <li>SHE promo: 1080×1920, 25s, six planned frames with type, pacing and RTL rules specified before production.</li>
+              <li>Rollzwich promo and a 9:16 product tour, with captures and rendered versions.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">Stack: HyperFrames · GSAP timelines · storyboard-driven pipeline</span>
+            <span class="stack" style="margin-top:.55rem; display:block;">Sample renders available on request</span>
+          </div>
+        </article>
       </div>
 
-      <article class="project rv">
-        <p class="idx" aria-hidden="true">01</p>
-        <div>
-          <h3>AL-Diwan Coffee — بُن الديوان <span class="chip">Live · Full-stack</span></h3>
-          <p class="desc">
-            A cinematic Arabic coffee-brand storefront with online ordering — and the platform
-            behind it. I started with the storefront, audited its gaps myself, then built the
-            backend it was missing.
-          </p>
-          <ul class="facts">
-            <li>Storefront: Three.js, GSAP + ScrollTrigger, Lenis smooth scroll, WhatsApp checkout, cart, RTL Arabic.</li>
-            <li>Backend I built after a written audit: Cloudflare Workers API (Hono + D1 + Zod) with admin dashboard, orders and tracking.</li>
-            <li>Security &amp; reliability: PBKDF2 password hashing, session cookies, rate limiting, CSRF checks, idempotent order creation.</li>
-            <li>Verified by an integration test suite I wrote: 33 assertions plus a full 10-step end-to-end order journey.</li>
-            <li>9 project documents: audits, implementation plan, readiness and QA reports.</li>
-          </ul>
+      <div class="lang-ar" lang="ar" dir="rtl">
+        <div class="section-head">
+          <span class="no">01</span>
+          <h2>الأعمال المختارة</h2>
+          <span class="note">8 من أكثر من 100 مستودع و30+ بناء مباشر — القائمة الكاملة في الأرشيف</span>
         </div>
-        <div class="side">
-          <span class="stack">Stack: HTML/CSS/JS · Three.js · GSAP · Cloudflare Workers · D1 · Zod</span>
-          <a href="https://nexora-01-eg.github.io/al-diwan-coffee/" rel="noopener">Open live site</a>
-          <a href="https://github.com/nexora-01-eg/al-diwan-coffee" rel="noopener">Repository</a>
-        </div>
-      </article>
 
-      <article class="project rv">
-        <p class="idx" aria-hidden="true">02</p>
-        <div>
-          <h3>SHE — she.shoes <span class="chip">Live store</span></h3>
-          <p class="desc">
-            A women's shoes &amp; bags boutique on its own domain — the closest thing in my work to
-            a live production store. Built twice: a lightweight storefront that ships fast, and a
-            full Next.js codebase behind it.
-          </p>
-          <ul class="facts">
-            <li>Live storefront on a real domain (she.shoes), Arabic RTL, cash-on-delivery flow, WhatsApp contact.</li>
-            <li>Next.js 15 + Supabase codebase with product pages, checkout, orders, admin area and content collections.</li>
-            <li>Build safety: a guard script runs before every build; seed data verified by script.</li>
-            <li>Promotional video produced with a written 6-frame storyboard (1080×1920, 25s).</li>
-          </ul>
-        </div>
-        <div class="side">
-          <span class="stack">Stack: Next.js 15 · React 19 · Supabase · Cloudflare · Sharp image pipeline</span>
-          <a href="https://she.shoes/" rel="noopener">Open live store</a>
-          <a href="https://github.com/nexora-01-eg/she-website" rel="noopener">Codebase</a>
-        </div>
-      </article>
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">01</p>
+          <div>
+            <h3>قهوة الديوان — بُن الديوان <span class="chip">مباشر · متكامل</span></h3>
+            <p class="desc">
+              واجهة عربية سينمائية لمقهى مع طلب أونلاين — والمنصة التي خلفها. بدأت بالواجهة،
+              ودقّقت فجواتها بتقرير مكتوب من إعدادي، ثم بنيت الخلفية التي كانت تنقصها.
+            </p>
+            <ul class="facts">
+              <li>الواجهة: Three.js و GSAP + ScrollTrigger و Lenis للتمرير السلس، سلة ودفع عبر واتساب، عربية RTL.</li>
+              <li>خلفية بنيتها بعد تدقيق مكتوب: API على Cloudflare Workers (‏Hono + D1 + Zod) مع لوحة تحكم للمشرف والطلبات والتتبع.</li>
+              <li>الأمان والموثوقية: تشفير كلمات المرور PBKDF2، وجلسات بكوكيز آمنة، وتحديد معدل الطلبات، وحماية CSRF، وإنشاء طلبات Idempotent.</li>
+              <li>تحقق عبر مجموعة اختبارات كتبتها بنفسي: 33 تأكيدًا اختباريًا + رحلة طلب كاملة من 10 خطوات (E2E).</li>
+              <li>9 مستندات للمشروع: تدقيقات، خطة تنفيذ، وتقارير جاهزية واختبار جودة.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">التقنيات: HTML/CSS/JS · Three.js · GSAP · Cloudflare Workers · D1 · Zod</span>
+            <a href="https://nexora-01-eg.github.io/al-diwan-coffee/" rel="noopener">فتح الموقع المباشر</a>
+            <a href="https://github.com/nexora-01-eg/al-diwan-coffee" rel="noopener">المستودع</a>
+          </div>
+        </article>
 
-      <article class="project rv">
-        <p class="idx" aria-hidden="true">03</p>
-        <div>
-          <h3>NEXORA Platform <span class="chip">Live site</span></h3>
-          <p class="desc">
-            My own digital-services platform: visual identity, websites and stores, marketing and
-            sales, automation and AI — presented as one connected growth system.
-          </p>
-          <ul class="facts">
-            <li>Deployed on Vercel with fully static, self-contained pages (no framework needed to serve it).</li>
-            <li>Serves as the umbrella brand for my client-site and demo production.</li>
-          </ul>
-        </div>
-        <div class="side">
-          <span class="stack">Stack: Static HTML/CSS · Vercel</span>
-          <a href="https://nexora01eg.vercel.app/" rel="noopener">Open live site</a>
-        </div>
-      </article>
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">02</p>
+          <div>
+            <h3>SHE — she.shoes <span class="chip">متجر مباشر</span></h3>
+            <p class="desc">
+              بوتيك أحذية وشنط حريمي على دومين خاص — أقرب شيء في أعمالي إلى متجر إنتاج حقيقي.
+              بُني مرتين: واجهة خفيفة سريعة، وقاعدة كود Next.js كاملة خلفها.
+            </p>
+            <ul class="facts">
+              <li>واجهة مباشرة على دومين حقيقي (she.shoes)، عربية RTL، ودفع عند الاستلام، وتواصل واتساب.</li>
+              <li>قاعدة كود Next.js 15 + Supabase بصفحات منتجات ودفع وطلبات ولوحة مشرف ومجموعات محتوى.</li>
+              <li>أمان البناء: سكربت حارس يعمل قبل كل بناء؛ وبيانات البذور تتحقق منها سكربتات مخصصة.</li>
+              <li>فيديو ترويجي مُنتَج وفق ستوري بورد مكتوب من 6 إطارات (1080×1920، 25 ثانية).</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">التقنيات: Next.js 15 · React 19 · Supabase · Cloudflare · Sharp</span>
+            <a href="https://she.shoes/" rel="noopener">فتح المتجر المباشر</a>
+            <a href="https://github.com/nexora-01-eg/she-website" rel="noopener">قاعدة الكود</a>
+          </div>
+        </article>
 
-      <article class="project rv">
-        <p class="idx" aria-hidden="true">04</p>
-        <div>
-          <h3>Mohamed Sadek Atlas <span class="chip">Personal OS</span></h3>
-          <p class="desc">
-            An interactive self-portrait: personal operating system × mind map × interactive
-            documentary. Every item is typed as <em>confirmed</em>, <em>interpretation</em>, or
-            <em>aspiration</em> — so nothing invented can present itself as fact.
-          </p>
-          <ul class="facts">
-            <li>Zero dependencies: vanilla JS + CSS + SVG, runs from static files with a tiny local server.</li>
-            <li>Data-driven: public JSON layers for profile, projects, skills, ideas — private data kept out of the bundle by design.</li>
-            <li>Knowledge-graph visualization of how I work and think.</li>
-          </ul>
-        </div>
-        <div class="side">
-          <span class="stack">Stack: Vanilla JS · CSS · SVG · JSON data layers</span>
-          <a href="https://github.com/nexora-01-eg/mohamed-sadek-atlas" rel="noopener">Repository</a>
-        </div>
-      </article>
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">03</p>
+          <div>
+            <h3>منصة NEXORA <span class="chip">موقع مباشر</span></h3>
+            <p class="desc">
+              منصتي الخاصة للخدمات الرقمية: هوية بصرية، مواقع ومتاجر، تسويق ومبيعات، أتمتة وذكاء
+              اصطناعي — معروضة كنظام نمو واحد مترابط.
+            </p>
+            <ul class="facts">
+              <li>منشورة على Vercel بصفحات ثابتة مكتفية ذاتيًا (لا تحتاج إطار عمل للعرض).</li>
+              <li>تعمل كالمظلة العلامية لإنتاج مواقع العملاء والعروض التجريبية.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">التقنيات: HTML/CSS ثابت · Vercel</span>
+            <a href="https://nexora01eg.vercel.app/" rel="noopener">فتح الموقع المباشر</a>
+          </div>
+        </article>
 
-      <article class="project rv">
-        <p class="idx" aria-hidden="true">05</p>
-        <div>
-          <h3>Rollz Restaurant System <span class="chip">System case study</span></h3>
-          <p class="desc">
-            One restaurant brand treated as a system: a typed TypeScript codebase with research
-            notes and a 50-item development roadmap, plus three live ordering surfaces.
-          </p>
-          <ul class="facts">
-            <li>Codebase: TypeScript client, Drizzle ORM schema, migration setup.</li>
-            <li>Planning: research notes, location-map review, and a 50-development-ideas document.</li>
-            <li>Live surfaces: interactive QR menu, Rollz Fast brand site, Rollz Fries menu — all order via WhatsApp.</li>
-          </ul>
-        </div>
-        <div class="side">
-          <span class="stack">Stack: TypeScript · Drizzle ORM · React</span>
-          <a class="link-gap" href="https://rollzqrmenu-jjayceny.manus.space/" rel="noopener">QR menu (live)</a>
-          <a href="https://github.com/nexora-01-eg/rollz-restaurant" rel="noopener">Repository</a>
-        </div>
-      </article>
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">04</p>
+          <div>
+            <h3>أطلس محمد صادق <span class="chip">نظام شخصي</span></h3>
+            <p class="desc">
+              بورتريه ذاتي تفاعلي: نظام تشغيل شخصي × خريطة ذهنية × وثائقي تفاعلي. كل عنصر مُصنَّف
+              كمُثبَّت أو تفسير أو طموح — فلا يمكن لأي معلومة مُختلَقة أن تتصرف كحقيقة.
+            </p>
+            <ul class="facts">
+              <li>بدون أي اعتماديات: JS وCSS وSVG خام، يعمل من ملفات ثابتة مع خادم محلي صغير.</li>
+              <li>موجّه بالبيانات: طبقات JSON عامة للملف والمشاريع والمهارات والأفكار — والبيانات الخاصة خارج الحزمة بالتصميم.</li>
+              <li>تصوّر شبكة معرفة (Knowledge Graph) لطريقة عملي وتفكيري.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">التقنيات: Vanilla JS · CSS · SVG · طبقات JSON</span>
+            <a href="https://github.com/nexora-01-eg/mohamed-sadek-atlas" rel="noopener">المستودع</a>
+          </div>
+        </article>
 
-      <article class="project rv">
-        <p class="idx" aria-hidden="true">06</p>
-        <div>
-          <h3>Nexora Client Sites <span class="chip">Client work</span></h3>
-          <p class="desc">
-            A production line for small-business websites: gyms, furniture showrooms, a spa, event
-            halls, offices, real estate. Each site is a fast single-file build generated from a
-            reusable template core I maintain.
-          </p>
-          <ul class="facts">
-            <li>13+ sites in the collection, with before/after comparison screenshots.</li>
-            <li>Template core derived from my Al-Diwan structure: swap one config file to re-brand a full cinematic site.</li>
-            <li>Built-in accessibility and motion-reduction support in the template itself.</li>
-          </ul>
-        </div>
-        <div class="side">
-          <span class="stack">Stack: Single-file HTML/CSS/JS · Template pipeline</span>
-          <a href="https://github.com/nexora-01-eg/nexora-client-sites" rel="noopener">Repository</a>
-        </div>
-      </article>
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">05</p>
+          <div>
+            <h3>نظام مطعم Rollz <span class="chip">دراسة نظام</span></h3>
+            <p class="desc">
+              علامة مطعم واحدة تُعامَل كنظام: قاعدة كود TypeScript مُنمَّطة مع ملاحظات بحث وخارطة
+              طريق تطوير من 50 بندًا، بالإضافة إلى ثلاث واجهات طلب مباشرة.
+            </p>
+            <ul class="facts">
+              <li>قاعدة الكود: عميل TypeScript، مخطط Drizzle ORM، وإعداد ترحيلات.</li>
+              <li>التخطيط: ملاحظات بحث ومراجعة خريطة الموقع ووثيقة أفكار تطوير من 50 بندًا.</li>
+              <li>واجهات مباشرة: منيو QR تفاعلي، موقع Rollz Fast، ومنيو Rollz Fries — كلها تطلب عبر واتساب.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">التقنيات: TypeScript · Drizzle ORM · React</span>
+            <a class="link-gap" href="https://rollzqrmenu-jjayceny.manus.space/" rel="noopener">منيو QR (مباشر)</a>
+            <a href="https://github.com/nexora-01-eg/rollz-restaurant" rel="noopener">المستودع</a>
+          </div>
+        </article>
 
-      <article class="project rv">
-        <p class="idx" aria-hidden="true">07</p>
-        <div>
-          <h3>Sasha Cinema <span class="chip">Prototype</span></h3>
-          <p class="desc">
-            The most technically ambitious build in my work: a bridal fashion story told as a
-            7-scene film. Code complete and built; deployment pending.
-          </p>
-          <ul class="facts">
-            <li>Vite + React 18 + TypeScript with Three.js / React-Three-Fiber and custom GLSL shaders (silk, waves), GPU particles.</li>
-            <li>Careful engineering limits: capped device pixel ratio, CSS fallback when WebGL is unavailable, full <code>prefers-reduced-motion</code> support.</li>
-            <li>Per-scene SEO routing, bilingual content layer, keyboard and swipe navigation.</li>
-          </ul>
-        </div>
-        <div class="side">
-          <span class="stack">Stack: React · TypeScript · Vite · Three.js/R3F · GLSL · GSAP · Lenis</span>
-          <span class="stack" style="margin-top:.55rem; display:block;">Code available on request — deployment pending</span>
-        </div>
-      </article>
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">06</p>
+          <div>
+            <h3>مواقع عملاء Nexora <span class="chip">أعمال عملاء</span></h3>
+            <p class="desc">
+              خط إنتاج لمواقع الأعمال الصغيرة: جيمات، معارض أثاث، سبا، قاعات مناسبات، مكاتب،
+              عقارات. كل موقع بناء سريع بملف واحد من قالب أساسي قابل لإعادة الاستخدام أصونه بنفسي.
+            </p>
+            <ul class="facts">
+              <li>أكثر من 13 موقعًا في المجموعة، مع لقطات مقارنة قبل/بعد.</li>
+              <li>القالب الأساسي مشتق من بنية الديوان: غيّر ملف إعداد واحد لتغيير هوية موقع سينمائي كامل.</li>
+              <li>دعم مدمج لإمكانية الوصول وتقليل الحركة داخل القالب نفسه.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">التقنيات: HTML/CSS/JS بملف واحد · خط قوالب</span>
+            <a href="https://github.com/nexora-01-eg/nexora-client-sites" rel="noopener">المستودع</a>
+          </div>
+        </article>
 
-      <article class="project rv">
-        <p class="idx" aria-hidden="true">08</p>
-        <div>
-          <h3>AI Promo Video Production <span class="chip">Capability</span></h3>
-          <p class="desc">
-            Storyboard-driven promotional videos produced with an AI video toolchain (HyperFrames):
-            written direction first, then motion, then render.
-          </p>
-          <ul class="facts">
-            <li>SHE promo: 1080×1920, 25s, six planned frames with type, pacing and RTL rules specified before production.</li>
-            <li>Rollzwich promo and a 9:16 product tour, with captures and rendered versions.</li>
-          </ul>
-        </div>
-        <div class="side">
-          <span class="stack">Stack: HyperFrames · GSAP timelines · storyboard-driven pipeline</span>
-          <span class="stack" style="margin-top:.55rem; display:block;">Sample renders available on request</span>
-        </div>
-      </article>
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">07</p>
+          <div>
+            <h3>Sasha Cinema <span class="chip">نموذج أولي</span></h3>
+            <p class="desc">
+              أكثر أعمالي طموحًا تقنيًا: قصة أزياء زفاف مروية كفيلم من 7 مشاهد. الكود مكتمل
+              ومبني؛ والنشر قيد الانتظار.
+            </p>
+            <ul class="facts">
+              <li>Vite + React 18 + TypeScript مع Three.js / React-Three-Fiber وشيدرز GLSL مخصصة (حرير وموجات) وجزيئات GPU.</li>
+              <li>حدود هندسية دقيقة: تقييد DPR، وبديل CSS عند غياب WebGL، ودعم كامل لـ prefers-reduced-motion.</li>
+              <li>توجيه SEO لكل مشهد، طبقة محتوى ثنائية اللغة، وتنقل بلوحة المفاتيح والسحب.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">التقنيات: React · TypeScript · Vite · Three.js/R3F · GLSL · GSAP · Lenis</span>
+            <span class="stack" style="margin-top:.55rem; display:block;">الكود متاح عند الطلب — النشر قيد الانتظار</span>
+          </div>
+        </article>
 
+        <article class="project rv">
+          <p class="idx" aria-hidden="true">08</p>
+          <div>
+            <h3>إنتاج فيديوهات ترويجية بالذكاء الاصطناعي <span class="chip">قدرة إنتاجية</span></h3>
+            <p class="desc">
+              فيديوهات ترويجية مبنية على ستوري بورد مكتوب عبر مسار أدوات فيديو بالذكاء الاصطناعي
+              (HyperFrames): التوجيه الكتابي أولًا، ثم الحركة، ثم الرندر.
+            </p>
+            <ul class="facts">
+              <li>برومو SHE: مقاس 1080×1920، مدة 25 ثانية، ستة إطارات مخططة كتابةً (الخط والإيقاع وقواعد RTL قبل الإنتاج).</li>
+              <li>برومو Rollzwich وجولة منتج 9:16 مع الكابشر والنسخ المُرندَرة.</li>
+            </ul>
+          </div>
+          <div class="side">
+            <span class="stack">التقنيات: HyperFrames · خطوط زمنية GSAP · مسار مبني على الستوري بورد</span>
+            <span class="stack" style="margin-top:.55rem; display:block;">عيّنات الرندر متاحة عند الطلب</span>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ================= SKILLS ================= -->
   <section id="skills" aria-labelledby="skills-title">
     <div class="wrap">
-      <div class="section-head" id="skills-title">
-        <span class="no">02</span>
-        <h2>Skills &amp; Tools</h2>
-        <span class="note">Backed by projects — no bars, no self-ratings</span>
+      <div class="lang-en" lang="en" dir="ltr">
+        <div class="section-head" id="skills-title">
+          <span class="no">02</span>
+          <h2>Skills &amp; Tools</h2>
+          <span class="note">Backed by projects — no bars, no self-ratings</span>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-col rv">
+            <h3>Proven in shipped work</h3>
+            <ul>
+              <li>Arabic-first, RTL web design <span class="ev">Al-Diwan · SHE · Rollz sites (live)</span></li>
+              <li>Cinematic scroll &amp; motion — GSAP, ScrollTrigger, Lenis, Three.js <span class="ev">Al-Diwan · cinematic concept sites</span></li>
+              <li>Vanilla-JS &amp; zero-dependency architecture <span class="ev">Atlas · template core</span></li>
+              <li>Cloudflare Workers APIs with D1 + Zod <span class="ev">Al-Diwan ordering backend</span></li>
+              <li>Applied web security — PBKDF2 auth, sessions, rate limiting, CSRF <span class="ev">Backend test suite</span></li>
+              <li>Integration &amp; E2E testing <span class="ev">33 assertions + full order journey</span></li>
+              <li>SQL migrations &amp; seed data <span class="ev">Al-Diwan platform</span></li>
+              <li>Template engineering &amp; reuse <span class="ev">Template core → 13+ sites</span></li>
+            </ul>
+          </div>
+          <div class="skill-col tier2 rv">
+            <h3>Working knowledge</h3>
+            <ul>
+              <li>Next.js 15 + Supabase storefronts <span class="ev">she-website (admin, checkout, ISR)</span></li>
+              <li>React + TypeScript + Vite, 3D &amp; shaders <span class="ev">Sasha Cinema (prototype)</span></li>
+              <li>Drizzle ORM <span class="ev">Rollz system</span></li>
+              <li>Python automation &amp; agent scripts <span class="ev">Task manager · orchestrators</span></li>
+              <li>Node.js tooling &amp; local servers <span class="ev">Asset pipeline · dev scripts</span></li>
+              <li>AI promo video production <span class="ev">SHE promo · Rollzwich</span></li>
+              <li>Template research &amp; verification <span class="ev">53-template library with logs</span></li>
+              <li>Asset optimization (WebP pipelines) <span class="ev">Image tooling</span></li>
+            </ul>
+          </div>
+          <div class="skill-col tier3 rv">
+            <h3>Currently exploring</h3>
+            <ul>
+              <li>Flutter &amp; Dart <span class="ev">Todo &amp; habit-tracker starter apps</span></li>
+              <li>Kotlin (Android) <span class="ev">Starter project</span></li>
+              <li>n8n workflow automation <span class="ev">Automation repo</span></li>
+              <li>3D masks &amp; image tooling in Python <span class="ev">Utility repos</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="skills-note rv">
+          Tool stack I use daily: <strong>OpenCode · Codex · Claude · Cursor · Manus · HyperFrames ·
+          GSAP · Three.js · Lenis · Next.js · Supabase · Cloudflare Workers/D1 · Vercel · GitHub ·
+          Vite · Drizzle · Zod · Python</strong>. Every skill above is backed by a project you can
+          open — I don't list tools I haven't used, and I don't rate myself with bars or percentages.
+        </p>
       </div>
-
-      <div class="skills-grid">
-        <div class="skill-col rv">
-          <h3>Proven in shipped work</h3>
-          <ul>
-            <li>Arabic-first, RTL web design <span class="ev">Al-Diwan · SHE · Rollz sites (live)</span></li>
-            <li>Cinematic scroll &amp; motion — GSAP, ScrollTrigger, Lenis, Three.js <span class="ev">Al-Diwan · cinematic concept sites</span></li>
-            <li>Vanilla-JS &amp; zero-dependency architecture <span class="ev">Atlas · template core</span></li>
-            <li>Cloudflare Workers APIs with D1 + Zod <span class="ev">Al-Diwan ordering backend</span></li>
-            <li>Applied web security — PBKDF2 auth, sessions, rate limiting, CSRF <span class="ev">Backend test suite</span></li>
-            <li>Integration &amp; E2E testing <span class="ev">33 assertions + full order journey</span></li>
-            <li>SQL migrations &amp; seed data <span class="ev">Al-Diwan platform</span></li>
-            <li>Template engineering &amp; reuse <span class="ev">Template core → 13+ sites</span></li>
-          </ul>
+      <div class="lang-ar" lang="ar" dir="rtl">
+        <div class="section-head">
+          <span class="no">02</span>
+          <h2>المهارات والأدوات</h2>
+          <span class="note">مدعومة بمشاريع — دون أشرطة أو تقييمات ذاتية</span>
         </div>
-        <div class="skill-col tier2 rv">
-          <h3>Working knowledge</h3>
-          <ul>
-            <li>Next.js 15 + Supabase storefronts <span class="ev">she-website (admin, checkout, ISR)</span></li>
-            <li>React + TypeScript + Vite, 3D &amp; shaders <span class="ev">Sasha Cinema (prototype)</span></li>
-            <li>Drizzle ORM <span class="ev">Rollz system</span></li>
-            <li>Python automation &amp; agent scripts <span class="ev">Task manager · orchestrators</span></li>
-            <li>Node.js tooling &amp; local servers <span class="ev">Asset pipeline · dev scripts</span></li>
-            <li>AI promo video production <span class="ev">SHE promo · Rollzwich</span></li>
-            <li>Template research &amp; verification <span class="ev">53-template library with logs</span></li>
-            <li>Asset optimization (WebP pipelines) <span class="ev">Image tooling</span></li>
-          </ul>
+        <div class="skills-grid">
+          <div class="skill-col rv">
+            <h3>مثبتة في أعمال منشورة</h3>
+            <ul>
+              <li>تصميم ويب عربي RTL أولًا <span class="ev">الديوان · SHE · مواقع Rollz (مباشرة)</span></li>
+              <li>تمرير وحركة سينمائية — GSAP وScrollTrigger وLenis وThree.js <span class="ev">الديوان · مواقع المفاهيم السينمائية</span></li>
+              <li>بنية JS خام بدون اعتماديات <span class="ev">الأطلس · القالب الأساسي</span></li>
+              <li>واجهات Cloudflare Workers مع D1 + Zod <span class="ev">خلفية طلبات الديوان</span></li>
+              <li>أمان ويب تطبيقي — PBKDF2 وجلسات وتحديد معدل وCSRF <span class="ev">مجموعة اختبارات الخلفية</span></li>
+              <li>اختبارات تكامل وE2E <span class="ev">33 تأكيدًا + رحلة طلب كاملة</span></li>
+              <li>ترحيلات SQL وبيانات بذور <span class="ev">منصة الديوان</span></li>
+              <li>هندسة قوالب وإعادة استخدام <span class="ev">القالب الأساسي → 13+ موقع</span></li>
+            </ul>
+          </div>
+          <div class="skill-col tier2 rv">
+            <h3>معرفة عملية</h3>
+            <ul>
+              <li>متاجر Next.js 15 + Supabase <span class="ev">she-website (مشرف ودفع وISR)</span></li>
+              <li>React + TypeScript + Vite وثلاثي الأبعاد والشيدرز <span class="ev">Sasha Cinema (نموذج أولي)</span></li>
+              <li>Drizzle ORM <span class="ev">نظام Rollz</span></li>
+              <li>أكواد Python للأتمتة والوكلاء <span class="ev">مدير مهام · منسّقات</span></li>
+              <li>أدوات Node.js وخوادم محلية <span class="ev">خط أصول · سكربتات تطوير</span></li>
+              <li>إنتاج فيديو ترويجي بالذكاء الاصطناعي <span class="ev">برومو SHE · Rollzwich</span></li>
+              <li>بحث قوالب وتحقق <span class="ev">مكتبة 53 قالبًا بسجلات</span></li>
+              <li>تحسين الأصول (WebP) <span class="ev">أدوات الصور</span></li>
+            </ul>
+          </div>
+          <div class="skill-col tier3 rv">
+            <h3>قيد الاستكشاف</h3>
+            <ul>
+              <li>Flutter وDart <span class="ev">تطبيقات بداية للمهام والعادات</span></li>
+              <li>Kotlin (أندرويد) <span class="ev">مشروع بداية</span></li>
+              <li>أتمتة n8n <span class="ev">مستودع أتمتة</span></li>
+              <li>أقنعة ثلاثية الأبعاد وأدوات صور بـ Python <span class="ev">مستودعات أدوات</span></li>
+            </ul>
+          </div>
         </div>
-        <div class="skill-col tier3 rv">
-          <h3>Currently exploring</h3>
-          <ul>
-            <li>Flutter &amp; Dart <span class="ev">Todo &amp; habit-tracker starter apps</span></li>
-            <li>Kotlin (Android) <span class="ev">Starter project</span></li>
-            <li>n8n workflow automation <span class="ev">Automation repo</span></li>
-            <li>3D masks &amp; image tooling in Python <span class="ev">Utility repos</span></li>
-          </ul>
-        </div>
+        <p class="skills-note rv">
+          أدوات أستخدمها يوميًا: <strong>OpenCode · Codex · Claude · Cursor · Manus · HyperFrames ·
+          GSAP · Three.js · Lenis · Next.js · Supabase · Cloudflare Workers/D1 · Vercel · GitHub ·
+          Vite · Drizzle · Zod · Python</strong>. كل مهارة أعلاه مدعومة بمشروع يمكنك فتحه — لا أُدرج
+          أدوات لم أستخدمها، ولا أقيّم نفسي بأشرطة أو نسب مئوية.
+        </p>
       </div>
-
-      <p class="skills-note rv">
-        Tool stack I use daily: <strong>OpenCode · Codex · Claude · Cursor · Manus · HyperFrames ·
-        GSAP · Three.js · Lenis · Next.js · Supabase · Cloudflare Workers/D1 · Vercel · GitHub ·
-        Vite · Drizzle · Zod · Python</strong>. Every skill above is backed by a project you can
-        open — I don't list tools I haven't used, and I don't rate myself with bars or percentages.
-      </p>
     </div>
   </section>
 
   <!-- ================= HOW I BUILD ================= -->
   <section id="process" aria-labelledby="process-title">
     <div class="wrap">
-      <div class="section-head" id="process-title">
-        <span class="no">03</span>
-        <h2>How I Build</h2>
-        <span class="note">With real examples from my projects</span>
+      <div class="lang-en" lang="en" dir="ltr">
+        <div class="section-head" id="process-title">
+          <span class="no">03</span>
+          <h2>How I Build</h2>
+          <span class="note">With real examples from my projects</span>
+        </div>
+        <ol class="steps">
+          <li class="rv"><div><h3>Understand the problem</h3><p>For Al-Diwan I wrote a deep audit first — it showed orders lived only in the browser and had no backend. That finding shaped everything after.</p></div></li>
+          <li class="rv"><div><h3>Research</h3><p>I keep research notes before building: the Rollz project has a location review and a 50-item development-ideas document; my template library holds 53 researched templates with verification logs.</p></div></li>
+          <li class="rv"><div><h3>Plan</h3><p>The Al-Diwan backend had a written implementation plan: keep the storefront, add an API, migrate nothing destructively, test each step.</p></div></li>
+          <li class="rv"><div><h3>Choose the right level of technology</h3><p>A single fast HTML file when that's enough (client sites); Next.js + Supabase when a store needs accounts and orders (SHE); a Workers API when orders must be trusted (Al-Diwan).</p></div></li>
+          <li class="rv"><div><h3>Build</h3><p>Ship small, keep versions: my portfolio alone went through ten-plus named iterations, and each client site reuses a tested core.</p></div></li>
+          <li class="rv"><div><h3>Test &amp; audit</h3><p>I write and run real tests: 33 integration assertions and a 10-step end-to-end order journey for the Al-Diwan API — with an honest list of what was not tested.</p></div></li>
+          <li class="rv"><div><h3>Review &amp; improve</h3><p>Client sites ship with before/after comparisons, and every project ends with a written readiness report and a to-do list for the next version.</p></div></li>
+        </ol>
       </div>
-      <ol class="steps">
-        <li class="rv">
-          <div><h3>Understand the problem</h3><p>For Al-Diwan I wrote a deep audit first — it showed orders lived only in the browser and had no backend. That finding shaped everything after.</p></div>
-        </li>
-        <li class="rv">
-          <div><h3>Research</h3><p>I keep research notes before building: the Rollz project has a location review and a 50-item development-ideas document; my template library holds 53 researched templates with verification logs.</p></div>
-        </li>
-        <li class="rv">
-          <div><h3>Plan</h3><p>The Al-Diwan backend had a written implementation plan: keep the storefront, add an API, migrate nothing destructively, test each step.</p></div>
-        </li>
-        <li class="rv">
-          <div><h3>Choose the right level of technology</h3><p>A single fast HTML file when that's enough (client sites); Next.js + Supabase when a store needs accounts and orders (SHE); a Workers API when orders must be trusted (Al-Diwan).</p></div>
-        </li>
-        <li class="rv">
-          <div><h3>Build</h3><p>Ship small, keep versions: my portfolio alone went through ten-plus named iterations, and each client site reuses a tested core.</p></div>
-        </li>
-        <li class="rv">
-          <div><h3>Test &amp; audit</h3><p>I write and run real tests: 33 integration assertions and a 10-step end-to-end order journey for the Al-Diwan API — with an honest list of what was not tested.</p></div>
-        </li>
-        <li class="rv">
-          <div><h3>Review &amp; improve</h3><p>Client sites ship with before/after comparisons, and every project ends with a written readiness report and a to-do list for the next version.</p></div>
-        </li>
-      </ol>
+      <div class="lang-ar" lang="ar" dir="rtl">
+        <div class="section-head">
+          <span class="no">03</span>
+          <h2>كيف أعمل</h2>
+          <span class="note">بأمثلة حقيقية من مشاريعي</span>
+        </div>
+        <ol class="steps">
+          <li class="rv"><div><h3>أفهم المشكلة</h3><p>للديوان كتبت تدقيقًا عميقًا أولًا — بيّن أن الطلبات كانت تعيش في المتصفح فقط بلا خلفية. تلك النتيجة شكّلت كل ما بعدها.</p></div></li>
+          <li class="rv"><div><h3>أبحث</h3><p>أحتفظ بملاحظات بحث قبل البناء: مشروع Rollz فيه مراجعة للموقع ووثيقة أفكار تطوير من 50 بندًا؛ ومكتبة قوالبي تضم 53 قالبًا مدروسًا بسجلات تحقق.</p></div></li>
+          <li class="rv"><div><h3>أخطّط</h3><p>خلفية الديوان كان لها خطة تنفيذ مكتوبة: إبقاء الواجهة، إضافة API، بلا ترحيلات مدمّرة، واختبار كل خطوة.</p></div></li>
+          <li class="rv"><div><h3>أختار المستوى المناسب من التقنية</h3><p>ملف HTML سريع واحد حين يكفي (مواقع العملاء)؛ Next.js + Supabase حين يحتاج المتجر حسابات وطلبات (SHE)؛ وAPI على Workers حين يجب أن تكون الطلبات موثوقة (الديوان).</p></div></li>
+          <li class="rv"><div><h3>أبني</h3><p>أُطلق صغيرًا وأحافظ على النسخ: ملف أعمالي وحده مرّ بأكثر من عشر نسخ مُسمّاة، وكل موقع عميل يعيد استخدام نواة مُختبَرة.</p></div></li>
+          <li class="rv"><div><h3>أختبر وأدقّق</h3><p>أكتب وأشغّل اختبارات حقيقية: 33 تأكيدًا تكامليًا ورحلة طلب من 10 خطوات لـ API الديوان — مع قائمة صادقة بما لم يُختبَر.</p></div></li>
+          <li class="rv"><div><h3>أراجع وأحسّن</h3><p>مواقع العملاء تُشحن مع مقارنات قبل/بعد، وكل مشروع ينتهي بتقرير جاهزية مكتوب وقائمة مهام للنسخة التالية.</p></div></li>
+        </ol>
+      </div>
     </div>
   </section>
 
   <!-- ================= EDUCATION & LANGUAGES ================= -->
   <section id="education" aria-labelledby="edu-title">
     <div class="wrap">
-      <div class="section-head" id="edu-title">
-        <span class="no">04</span>
-        <h2>Education &amp; Languages</h2>
-      </div>
-      <div class="edu-grid">
-        <div class="edu-block rv">
-          <h3>Education</h3>
-          <p class="item">
-            <span class="t">Faculty of Economics and Political Science</span> — Cairo University
-          </p>
-          <p class="item"><span class="d">Undergraduate · expected graduation 2027</span></p>
+      <div class="lang-en" lang="en" dir="ltr">
+        <div class="section-head" id="edu-title">
+          <span class="no">04</span>
+          <h2>Education &amp; Languages</h2>
         </div>
-        <div class="edu-block rv">
-          <h3>Languages</h3>
-          <ul>
-            <li>Arabic <span>— native</span></li>
-            <li>English <span>— B1 (self-assessed)</span></li>
-          </ul>
+        <div class="edu-grid">
+          <div class="edu-block rv">
+            <h3>Education</h3>
+            <p class="item"><span class="t">Faculty of Economics and Political Science</span> — Cairo University</p>
+            <p class="item"><span class="d">Undergraduate · expected graduation 2027</span></p>
+          </div>
+          <div class="edu-block rv">
+            <h3>Languages</h3>
+            <ul>
+              <li>Arabic <span>— native</span></li>
+              <li>English <span>— B1 (self-assessed)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lang-ar" lang="ar" dir="rtl">
+        <div class="section-head">
+          <span class="no">04</span>
+          <h2>التعليم واللغات</h2>
+        </div>
+        <div class="edu-grid">
+          <div class="edu-block rv">
+            <h3>التعليم</h3>
+            <p class="item"><span class="t">كلية الاقتصاد والعلوم السياسية</span> — جامعة القاهرة</p>
+            <p class="item"><span class="d">طالب جامعي · التخرج المتوقع 2027</span></p>
+          </div>
+          <div class="edu-block rv">
+            <h3>اللغات</h3>
+            <ul>
+              <li>العربية <span>— اللغة الأم</span></li>
+              <li>الإنجليزية <span>— B1 (تقدير ذاتي)</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -405,31 +731,62 @@
   <!-- ================= CONTACT ================= -->
   <section id="contact" aria-labelledby="contact-title">
     <div class="wrap">
-      <div class="section-head" id="contact-title">
-        <span class="no">05</span>
-        <h2>Contact</h2>
-        <span class="note">Usually replies within a day</span>
+      <div class="lang-en" lang="en" dir="ltr">
+        <div class="section-head" id="contact-title">
+          <span class="no">05</span>
+          <h2>Contact</h2>
+          <span class="note">Usually replies within a day</span>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-item rv" href="mailto:mohamed_sadek07@outlook.com">
+            <span class="k">Email</span>
+            <span class="v">mohamed_sadek07@outlook.com</span>
+            <span class="n">Best for job offers and questions</span>
+          </a>
+          <a class="contact-item rv" href="tel:+201000025168">
+            <span class="k">Phone / WhatsApp</span>
+            <span class="v">01000025168</span>
+            <span class="n">Egypt · GMT+2</span>
+          </a>
+          <a class="contact-item rv" href="https://github.com/nexora-01-eg" rel="noopener">
+            <span class="k">GitHub</span>
+            <span class="v">github.com/nexora-01-eg</span>
+            <span class="n">100+ public repositories</span>
+          </a>
+          <div class="contact-item rv">
+            <span class="k">Live work right now</span>
+            <span class="v">she.shoes</span>
+            <span class="n">Plus <a href="https://nexora-01-eg.github.io/al-diwan-coffee/" rel="noopener">Al-Diwan Coffee</a> and <a href="https://nexora01eg.vercel.app/" rel="noopener">NEXORA</a></span>
+          </div>
+        </div>
       </div>
-      <div class="contact-grid">
-        <a class="contact-item rv" href="mailto:mohamed_sadek07@outlook.com">
-          <span class="k">Email</span>
-          <span class="v">mohamed_sadek07@outlook.com</span>
-          <span class="n">Best for job offers and questions</span>
-        </a>
-        <a class="contact-item rv" href="tel:+201000025168">
-          <span class="k">Phone / WhatsApp</span>
-          <span class="v">01000025168</span>
-          <span class="n">Egypt · GMT+2</span>
-        </a>
-        <a class="contact-item rv" href="https://github.com/nexora-01-eg" rel="noopener">
-          <span class="k">GitHub</span>
-          <span class="v">github.com/nexora-01-eg</span>
-          <span class="n">100+ public repositories</span>
-        </a>
-        <div class="contact-item rv">
-          <span class="k">Live work right now</span>
-          <span class="v">she.shoes</span>
-          <span class="n">Plus <a href="https://nexora-01-eg.github.io/al-diwan-coffee/" rel="noopener">Al-Diwan Coffee</a> and <a href="https://nexora01eg.vercel.app/" rel="noopener">NEXORA</a></span>
+      <div class="lang-ar" lang="ar" dir="rtl">
+        <div class="section-head">
+          <span class="no">05</span>
+          <h2>التواصل</h2>
+          <span class="note">أرد عادةً خلال يوم</span>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-item rv" href="mailto:mohamed_sadek07@outlook.com">
+            <span class="k">البريد الإلكتروني</span>
+            <span class="v" dir="ltr">mohamed_sadek07@outlook.com</span>
+            <span class="n">الأفضل لعروض العمل والأسئلة</span>
+          </a>
+          <a class="contact-item rv" href="tel:+201000025168">
+            <span class="k">هاتف / واتساب</span>
+            <span class="v" dir="ltr">01000025168</span>
+            <span class="n">مصر · بتوقيت GMT+2</span>
+          </a>
+          <a class="contact-item rv" href="https://github.com/nexora-01-eg" rel="noopener">
+            <span class="k">جيت هب</span>
+            <span class="v" dir="ltr">github.com/nexora-01-eg</span>
+            <span class="n">أكثر من 100 مستودع عام</span>
+          </a>
+          <div class="contact-item rv">
+            <span class="k">الأعمال المباشرة الآن</span>
+            <span class="v" dir="ltr">she.shoes</span>
+            <span class="n">مع <a href="https://nexora-01-eg.github.io/al-diwan-coffee/" rel="noopener">قهوة الديوان</a> و<a href="https://nexora01eg.vercel.app/" rel="noopener">NEXORA</a></span>
+          </div>
         </div>
       </div>
     </div>
@@ -440,78 +797,81 @@
     <div class="wrap">
       <div class="section-head" id="archive-title">
         <span class="no">06</span>
-        <h2>Project Archive</h2>
-        <span class="note">Everything verified, nothing hidden</span>
+        <h2><span class="t-en">Project Archive</span><span class="t-ar">أرشيف المشاريع</span></h2>
+        <span class="note"><span class="t-en">Everything verified, nothing hidden</span><span class="t-ar">كل شيء مُتحقَّق منه، لا شيء مخفي</span></span>
       </div>
 
       <div class="filterbar" role="group" aria-label="Filter archive">
-        <button type="button" data-filter="all" aria-pressed="true">All</button>
-        <button type="button" data-filter="rest" aria-pressed="false">Restaurants &amp; ordering</button>
-        <button type="button" data-filter="brand" aria-pressed="false">Brand &amp; business</button>
-        <button type="button" data-filter="creative" aria-pressed="false">Creative &amp; experimental</button>
-        <button type="button" data-filter="apps" aria-pressed="false">Apps &amp; AI</button>
-        <button type="button" data-filter="code" aria-pressed="false">Tools &amp; repositories</button>
+        <button type="button" data-filter="all" aria-pressed="true"><span class="t-en">All</span><span class="t-ar">الكل</span></button>
+        <button type="button" data-filter="rest" aria-pressed="false"><span class="t-en">Restaurants &amp; ordering</span><span class="t-ar">مطاعم وطلب</span></button>
+        <button type="button" data-filter="brand" aria-pressed="false"><span class="t-en">Brand &amp; business</span><span class="t-ar">علامات وأعمال</span></button>
+        <button type="button" data-filter="creative" aria-pressed="false"><span class="t-en">Creative &amp; experimental</span><span class="t-ar">إبداع وتجارب</span></button>
+        <button type="button" data-filter="apps" aria-pressed="false"><span class="t-en">Apps &amp; AI</span><span class="t-ar">تطبيقات وذكاء اصطناعي</span></button>
+        <button type="button" data-filter="code" aria-pressed="false"><span class="t-en">Tools &amp; repositories</span><span class="t-ar">أدوات ومستودعات</span></button>
       </div>
 
       <ul class="archive-list" id="archive-list">
         <!-- Restaurants & ordering -->
-        <li data-cat="rest"><span class="an">Resto POS — مطعمي</span><span class="ad"><a href="https://restopos-hoqmdxgy.manus.space/" rel="noopener">Restaurant management platform (POS)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="rest"><span class="an">Nexora Resto</span><span class="ad"><a href="https://nexorestau-fbufdwma.manus.space/" rel="noopener">Fast Arabic restaurant order page</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="rest"><span class="an">Rollz QR Menu</span><span class="ad"><a href="https://rollzqrmenu-jjayceny.manus.space/" rel="noopener">Interactive menu → WhatsApp ordering</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="rest"><span class="an">Rollz Fast</span><span class="ad"><a href="https://rollzfast-4ogdvddw.manus.space/" rel="noopener">Brand &amp; ordering site — Shebin El-Kom</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="rest"><span class="an">Rollz Fries</span><span class="ad"><a href="https://rollzfries-oytnqrgg.manus.space/" rel="noopener">Fries &amp; sandwiches menu site</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="rest"><span class="an">Don Vito Pizza</span><span class="ad"><a href="https://donvito-pizz-58uspa9b.manus.space/" rel="noopener">Italian pizza &amp; pasta — Shebin El-Kom</a></span><span class="as"><span class="live">● Live</span> <span class="warn">(slow host)</span></span></li>
-        <li data-cat="rest"><span class="an">Tawqak — طابورك</span><span class="ad"><a href="https://tawqakapp-k7gqwxhf.manus.space/" rel="noopener">Queue management app concept</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="rest"><span class="an">Delivery OS</span><span class="ad"><a href="https://deliveryos-pegk8scd.manus.space/" rel="noopener">Delivery platform — full system</a></span><span class="as"><span class="warn">● Login required</span></span></li>
+        <li data-cat="rest"><span class="an"><span class="t-en">Resto POS — مطعمي</span><span class="t-ar">Resto POS — مطعمي</span></span><span class="ad"><span class="t-en"><a href="https://restopos-hoqmdxgy.manus.space/" rel="noopener">Restaurant management platform (POS)</a></span><span class="t-ar"><a href="https://restopos-hoqmdxgy.manus.space/" rel="noopener">منصة إدارة مطاعم (POS)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="rest"><span class="an"><span class="t-en">Nexora Resto</span><span class="t-ar">Nexora Resto</span></span><span class="ad"><span class="t-en"><a href="https://nexorestau-fbufdwma.manus.space/" rel="noopener">Fast Arabic restaurant order page</a></span><span class="t-ar"><a href="https://nexorestau-fbufdwma.manus.space/" rel="noopener">صفحة طلب عربية سريعة للمطاعم</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="rest"><span class="an"><span class="t-en">Rollz QR Menu</span><span class="t-ar">Rollz QR Menu</span></span><span class="ad"><span class="t-en"><a href="https://rollzqrmenu-jjayceny.manus.space/" rel="noopener">Interactive menu → WhatsApp ordering</a></span><span class="t-ar"><a href="https://rollzqrmenu-jjayceny.manus.space/" rel="noopener">منيو تفاعلي ← طلب عبر واتساب</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="rest"><span class="an"><span class="t-en">Rollz Fast</span><span class="t-ar">Rollz Fast</span></span><span class="ad"><span class="t-en"><a href="https://rollzfast-4ogdvddw.manus.space/" rel="noopener">Brand &amp; ordering site — Shebin El-Kom</a></span><span class="t-ar"><a href="https://rollzfast-4ogdvddw.manus.space/" rel="noopener">موقع علامة وطلب — شبين الكوم</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="rest"><span class="an"><span class="t-en">Rollz Fries</span><span class="t-ar">Rollz Fries</span></span><span class="ad"><span class="t-en"><a href="https://rollzfries-oytnqrgg.manus.space/" rel="noopener">Fries &amp; sandwiches menu site</a></span><span class="t-ar"><a href="https://rollzfries-oytnqrgg.manus.space/" rel="noopener">منيو فرايز وساندوتشات</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="rest"><span class="an"><span class="t-en">Don Vito Pizza</span><span class="t-ar">Don Vito Pizza</span></span><span class="ad"><span class="t-en"><a href="https://donvito-pizz-58uspa9b.manus.space/" rel="noopener">Italian pizza &amp; pasta — Shebin El-Kom</a></span><span class="t-ar"><a href="https://donvito-pizz-58uspa9b.manus.space/" rel="noopener">بيتزا وباستا إيطالية — شبين الكوم</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span> <span class="warn">(slow host)</span></span><span class="t-ar"><span class="live">● مباشر</span> <span class="warn">(مستضيف بطيء)</span></span></span></li>
+        <li data-cat="rest"><span class="an"><span class="t-en">Tawqak — طابورك</span><span class="t-ar">طابورك — Tawqak</span></span><span class="ad"><span class="t-en"><a href="https://tawqakapp-k7gqwxhf.manus.space/" rel="noopener">Queue management app concept</a></span><span class="t-ar"><a href="https://tawqakapp-k7gqwxhf.manus.space/" rel="noopener">مفهوم تطبيق إدارة أدوار</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="rest"><span class="an"><span class="t-en">Delivery OS</span><span class="t-ar">Delivery OS</span></span><span class="ad"><span class="t-en"><a href="https://deliveryos-pegk8scd.manus.space/" rel="noopener">Delivery platform — full system</a></span><span class="t-ar"><a href="https://deliveryos-pegk8scd.manus.space/" rel="noopener">منصة توصيل — نظام متكامل</a></span></span><span class="as"><span class="t-en"><span class="warn">● Login required</span></span><span class="t-ar"><span class="warn">● تسجيل دخول مطلوب</span></span></span></li>
 
         <!-- Brand & business -->
-        <li data-cat="brand"><span class="an">Nexora Design</span><span class="ad"><a href="https://nexoredesign-fu9oajtr.manus.space/" rel="noopener">NEXORA growth-system site</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="brand"><span class="an">Lamsa — لمسة شوبك</span><span class="ad"><a href="https://lamstbrand-p68r54qh.manus.space/" rel="noopener">Food brand site — Aqaba</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="brand"><span class="an">VIP Accessory</span><span class="ad"><a href="https://vipaccessory-awazsfcx.manus.space/" rel="noopener">Luxury boutique concept (EN)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="brand"><span class="an">Nafath — نفاذ (Apple concept)</span><span class="ad"><a href="https://applestore-tg9xavqq.manus.space/" rel="noopener">Apple devices discovery &amp; order concept</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="brand"><span class="an">Elite Dent EG</span><span class="ad"><a href="https://elitedenteg-4mjl6dkq.manus.space/" rel="noopener">Dental clinic site — Cairo (EN)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="brand"><span class="an">Avalin Folio</span><span class="ad"><a href="https://avalinfolio-97q5jgdl.manus.space/" rel="noopener">Designer-portfolio concept (fictional persona)</a></span><span class="as"><span class="live">● Live</span> <span class="warn">(concept)</span></span></li>
+        <li data-cat="brand"><span class="an"><span class="t-en">Nexora Design</span><span class="t-ar">Nexora Design</span></span><span class="ad"><span class="t-en"><a href="https://nexoredesign-fu9oajtr.manus.space/" rel="noopener">NEXORA growth-system site</a></span><span class="t-ar"><a href="https://nexoredesign-fu9oajtr.manus.space/" rel="noopener">موقع نظام النمو NEXORA</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="brand"><span class="an"><span class="t-en">Lamsa — لمسة شوبك</span><span class="t-ar">لمسة شوبك</span></span><span class="ad"><span class="t-en"><a href="https://lamstbrand-p68r54qh.manus.space/" rel="noopener">Food brand site — Aqaba</a></span><span class="t-ar"><a href="https://lamstbrand-p68r54qh.manus.space/" rel="noopener">موقع علامة أكل — العقبة</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="brand"><span class="an"><span class="t-en">VIP Accessory</span><span class="t-ar">VIP Accessory</span></span><span class="ad"><span class="t-en"><a href="https://vipaccessory-awazsfcx.manus.space/" rel="noopener">Luxury boutique concept (EN)</a></span><span class="t-ar"><a href="https://vipaccessory-awazsfcx.manus.space/" rel="noopener">مفهوم بوتيك فاخر (EN)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="brand"><span class="an"><span class="t-en">Nafath — نفاذ (Apple concept)</span><span class="t-ar">نفاذ (مفهوم Apple)</span></span><span class="ad"><span class="t-en"><a href="https://applestore-tg9xavqq.manus.space/" rel="noopener">Apple devices discovery &amp; order concept</a></span><span class="t-ar"><a href="https://applestore-tg9xavqq.manus.space/" rel="noopener">مفهوم اكتشاف وطلب أجهزة Apple</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="brand"><span class="an"><span class="t-en">Elite Dent EG</span><span class="t-ar">Elite Dent EG</span></span><span class="ad"><span class="t-en"><a href="https://elitedenteg-4mjl6dkq.manus.space/" rel="noopener">Dental clinic site — Cairo (EN)</a></span><span class="t-ar"><a href="https://elitedenteg-4mjl6dkq.manus.space/" rel="noopener">موقع عيادة أسنان — القاهرة (EN)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="brand"><span class="an"><span class="t-en">Avalin Folio</span><span class="t-ar">Avalin Folio</span></span><span class="ad"><span class="t-en"><a href="https://avalinfolio-97q5jgdl.manus.space/" rel="noopener">Designer-portfolio concept (fictional persona)</a></span><span class="t-ar"><a href="https://avalinfolio-97q5jgdl.manus.space/" rel="noopener">مفهوم بورتفوليو مصمم (شخصية خيالية)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span> <span class="warn">(concept)</span></span><span class="t-ar"><span class="live">● مباشر</span> <span class="warn">(مفهوم)</span></span></span></li>
 
         <!-- Creative & experimental -->
-        <li data-cat="creative"><span class="an">Tutankhamun — بوابة الأبدية</span><span class="ad"><a href="https://tutankhamun-jbokgmef.manus.space/" rel="noopener">Immersive visual journey (AR)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="creative"><span class="an">Khamrah — خمرة</span><span class="ad"><a href="https://dunenight-aird3qvo.manus.space/" rel="noopener">Oriental perfume page</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="creative"><span class="an">CINEM AI</span><span class="ad"><a href="https://cinemai-dfpmr6mg.manus.space/" rel="noopener">Culture &amp; technology scene journal (AR)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="creative"><span class="an">NEON-X</span><span class="ad"><a href="https://neonmotion-k2486p5q.manus.space/" rel="noopener">Electric motion concept (AR)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="creative"><span class="an">AURORA OBJECT</span><span class="ad"><a href="https://luminstudio-lyktzf8p.manus.space/" rel="noopener">Lighting-design concept (EN)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="creative"><span class="an">LUMA</span><span class="ad"><a href="https://lumawave-nlmfxjxt.manus.space/" rel="noopener">"The Slow Signal" concept (EN)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="creative"><span class="an">Hyperframe Studio</span><span class="ad"><a href="https://hyperframe-4bilqbgh.manus.space/" rel="noopener">Live scene-editor tool (AR)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="creative"><span class="an">Impossiblest — المستحيل</span><span class="ad"><a href="https://impossiblest-xzkctkg8.manus.space/" rel="noopener">"Impossible appointments" store concept</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="creative"><span class="an">BAYT Furniture</span><span class="ad"><a href="https://github.com/nexora-01-eg/furniture-showroom-demo" rel="noopener">Interactive Arabic showroom demo (placeholder data)</a></span><span class="as">◆ Repository</span></li>
-        <li data-cat="creative"><span class="an">LUMIERE / HIGH LIFE / FLUXA</span><span class="ad"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=demo" rel="noopener">VIP boutique, premium brand &amp; motion-studio concepts</a></span><span class="as">◆ Repositories</span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">Tutankhamun — بوابة الأبدية</span><span class="t-ar">توت عنخ آمون — بوابة الأبدية</span></span><span class="ad"><span class="t-en"><a href="https://tutankhamun-jbokgmef.manus.space/" rel="noopener">Immersive visual journey (AR)</a></span><span class="t-ar"><a href="https://tutankhamun-jbokgmef.manus.space/" rel="noopener">رحلة بصرية غامرة (عربي)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">Khamrah — خمرة</span><span class="t-ar">خمرة</span></span><span class="ad"><span class="t-en"><a href="https://dunenight-aird3qvo.manus.space/" rel="noopener">Oriental perfume page</a></span><span class="t-ar"><a href="https://dunenight-aird3qvo.manus.space/" rel="noopener">صفحة عطر شرقي</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">CINEM AI</span><span class="t-ar">CINEM AI</span></span><span class="ad"><span class="t-en"><a href="https://cinemai-dfpmr6mg.manus.space/" rel="noopener">Culture &amp; technology scene journal (AR)</a></span><span class="t-ar"><a href="https://cinemai-dfpmr6mg.manus.space/" rel="noopener">مجلة مشاهد ثقافة وتقنية (عربي)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">NEON-X</span><span class="t-ar">NEON-X</span></span><span class="ad"><span class="t-en"><a href="https://neonmotion-k2486p5q.manus.space/" rel="noopener">Electric motion concept (AR)</a></span><span class="t-ar"><a href="https://neonmotion-k2486p5q.manus.space/" rel="noopener">مفهوم حركة كهربائية (عربي)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">AURORA OBJECT</span><span class="t-ar">AURORA OBJECT</span></span><span class="ad"><span class="t-en"><a href="https://luminstudio-lyktzf8p.manus.space/" rel="noopener">Lighting-design concept (EN)</a></span><span class="t-ar"><a href="https://luminstudio-lyktzf8p.manus.space/" rel="noopener">مفهوم تصميم إضاءة (EN)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">LUMA</span><span class="t-ar">LUMA</span></span><span class="ad"><span class="t-en"><a href="https://lumawave-nlmfxjxt.manus.space/" rel="noopener">"The Slow Signal" concept (EN)</a></span><span class="t-ar"><a href="https://lumawave-nlmfxjxt.manus.space/" rel="noopener">مفهوم «الإشارة البطيئة» (EN)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">Hyperframe Studio</span><span class="t-ar">Hyperframe Studio</span></span><span class="ad"><span class="t-en"><a href="https://hyperframe-4bilqbgh.manus.space/" rel="noopener">Live scene-editor tool (AR)</a></span><span class="t-ar"><a href="https://hyperframe-4bilqbgh.manus.space/" rel="noopener">أداة محرر مشاهد مباشرة (عربي)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">Impossiblest — المستحيل</span><span class="t-ar">المستحيل</span></span><span class="ad"><span class="t-en"><a href="https://impossiblest-xzkctkg8.manus.space/" rel="noopener">"Impossible appointments" store concept</a></span><span class="t-ar"><a href="https://impossiblest-xzkctkg8.manus.space/" rel="noopener">مفهوم متجر «مواعيد مستحيلة»</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">BAYT Furniture</span><span class="t-ar">BAYT Furniture</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg/furniture-showroom-demo" rel="noopener">Interactive Arabic showroom demo (placeholder data)</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg/furniture-showroom-demo" rel="noopener">عرض مفهوم تفاعلي (بيانات وهمية)</a></span></span><span class="as"><span class="t-en">◆ Repository</span><span class="t-ar">◆ مستودع</span></span></li>
+        <li data-cat="creative"><span class="an"><span class="t-en">LUMIERE / HIGH LIFE / FLUXA</span><span class="t-ar">LUMIERE / HIGH LIFE / FLUXA</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=demo" rel="noopener">VIP boutique, premium brand &amp; motion-studio concepts</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=demo" rel="noopener">مفاهيم بوتيك وعلامة واستوديو حركة</a></span></span><span class="as"><span class="t-en">◆ Repositories</span><span class="t-ar">◆ مستودعات</span></span></li>
 
         <!-- Apps & AI -->
-        <li data-cat="apps"><span class="an">VibeArena</span><span class="ad"><a href="https://wiplayarena-jylkkqpl.manus.space/" rel="noopener">Live Arabic group-quiz app</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="apps"><span class="an">PhysMaster Pro</span><span class="ad"><a href="https://physmaster-nnrervqn.manus.space/" rel="noopener">Physics lessons, attendance &amp; progress manager</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="apps"><span class="an">MOSS Notes</span><span class="ad"><a href="https://mossnotes-ehfvc3qu.manus.space/" rel="noopener">Urban-rewilding field notes (EN)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="apps"><span class="an">Marsa — مرسى</span><span class="ad"><a href="https://aiproducts-rznwzgml.manus.space/" rel="noopener">Smart projects studio (AR)</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="apps"><span class="an">Vexoria</span><span class="ad"><a href="https://vexoria-nine.vercel.app/" rel="noopener">Cognitive-architecture program site</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="apps"><span class="an">Lead for NEXORA</span><span class="ad"><a href="https://lead-for-nexora.ai.studio/" rel="noopener">Lead-capture tool built on ai.studio</a></span><span class="as"><span class="live">● Live</span></span></li>
-        <li data-cat="apps"><span class="an">Wedding Invitations</span><span class="ad"><a href="https://wedding-invitations-psi-seven.vercel.app/" rel="noopener">Digital invitation app</a></span><span class="as"><span class="off">○ Offline</span> <span class="warn">(paused on Vercel)</span></span></li>
+        <li data-cat="apps"><span class="an"><span class="t-en">VibeArena</span><span class="t-ar">VibeArena</span></span><span class="ad"><span class="t-en"><a href="https://wiplayarena-jylkkqpl.manus.space/" rel="noopener">Live Arabic group-quiz app</a></span><span class="t-ar"><a href="https://wiplayarena-jylkkqpl.manus.space/" rel="noopener">تطبيق مسابقات عربية مباشر</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="apps"><span class="an"><span class="t-en">PhysMaster Pro</span><span class="t-ar">PhysMaster Pro</span></span><span class="ad"><span class="t-en"><a href="https://physmaster-nnrervqn.manus.space/" rel="noopener">Physics lessons, attendance &amp; progress manager</a></span><span class="t-ar"><a href="https://physmaster-nnrervqn.manus.space/" rel="noopener">مدير حصص وحضور وتقدم فيزياء</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="apps"><span class="an"><span class="t-en">MOSS Notes</span><span class="t-ar">MOSS Notes</span></span><span class="ad"><span class="t-en"><a href="https://mossnotes-ehfvc3qu.manus.space/" rel="noopener">Urban-rewilding field notes (EN)</a></span><span class="t-ar"><a href="https://mossnotes-ehfvc3qu.manus.space/" rel="noopener">دفاتر ملاحظات إعادة تشجير (EN)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="apps"><span class="an"><span class="t-en">Marsa — مرسى</span><span class="t-ar">مرسى</span></span><span class="ad"><span class="t-en"><a href="https://aiproducts-rznwzgml.manus.space/" rel="noopener">Smart projects studio (AR)</a></span><span class="t-ar"><a href="https://aiproducts-rznwzgml.manus.space/" rel="noopener">استوديو مشاريع ذكي (عربي)</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="apps"><span class="an"><span class="t-en">Vexoria</span><span class="t-ar">Vexoria</span></span><span class="ad"><span class="t-en"><a href="https://vexoria-nine.vercel.app/" rel="noopener">Cognitive-architecture program site</a></span><span class="t-ar"><a href="https://vexoria-nine.vercel.app/" rel="noopener">موقع برنامج هندسة معرفية</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="apps"><span class="an"><span class="t-en">Lead for NEXORA</span><span class="t-ar">Lead for NEXORA</span></span><span class="ad"><span class="t-en"><a href="https://lead-for-nexora.ai.studio/" rel="noopener">Lead-capture tool built on ai.studio</a></span><span class="t-ar"><a href="https://lead-for-nexora.ai.studio/" rel="noopener">أداة التقاط عملاء محتملين على ai.studio</a></span></span><span class="as"><span class="t-en"><span class="live">● Live</span></span><span class="t-ar"><span class="live">● مباشر</span></span></span></li>
+        <li data-cat="apps"><span class="an"><span class="t-en">Wedding Invitations</span><span class="t-ar">دعوات الزفاف</span></span><span class="ad"><span class="t-en"><a href="https://wedding-invitations-psi-seven.vercel.app/" rel="noopener">Digital invitation app</a></span><span class="t-ar"><a href="https://wedding-invitations-psi-seven.vercel.app/" rel="noopener">تطبيق دعوات رقمية</a></span></span><span class="as"><span class="t-en"><span class="off">○ Offline</span> <span class="warn">(paused on Vercel)</span></span><span class="t-ar"><span class="off">○ غير متصل</span> <span class="warn">(متوقف على Vercel)</span></span></span></li>
 
         <!-- Tools & repositories -->
-        <li data-cat="code"><span class="an">Template Library</span><span class="ad"><a href="https://github.com/nexora-01-eg/template-library" rel="noopener">53 researched templates, 15 categories, verification logs</a></span><span class="as">◆ Repository</span></li>
-        <li data-cat="code"><span class="an">Rollz restaurant system</span><span class="ad"><a href="https://github.com/nexora-01-eg/rollz-restaurant" rel="noopener">TypeScript + Drizzle codebase &amp; roadmap</a></span><span class="as">◆ Repository</span></li>
-        <li data-cat="code"><span class="an">she-website</span><span class="ad"><a href="https://github.com/nexora-01-eg/she-website" rel="noopener">Next.js + Supabase storefront codebase</a></span><span class="as">◆ Repository</span></li>
-        <li data-cat="code"><span class="an">MR demo collections</span><span class="ad"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=mr-demos" rel="noopener">Food · medical · beauty · education · logistics · misc</a></span><span class="as">◆ Repositories</span></li>
-        <li data-cat="code"><span class="an">Web demo collections</span><span class="ad"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=demos" rel="noopener">web-demos · threeui-demos · ar-demos · html-games · web-clones · drafts</a></span><span class="as">◆ Repositories</span></li>
-        <li data-cat="code"><span class="an">Arsenal collections</span><span class="ad"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=arsenal" rel="noopener">Demos · toolkit · gallery · audit</a></span><span class="as">◆ Repositories</span></li>
-        <li data-cat="code"><span class="an">AI agent experiments</span><span class="ad"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=agent" rel="noopener">Orchestrator · task manager · test orchestrator (Python)</a></span><span class="as">◆ Repositories</span></li>
-        <li data-cat="code"><span class="an">Dev tools &amp; scripts</span><span class="ad"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=tools" rel="noopener">qaima-tools · dev-scripts · cf-live-test · n8n-automation</a></span><span class="as">◆ Repositories</span></li>
-        <li data-cat="code"><span class="an">Video &amp; motion assets</span><span class="ad"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=pack" rel="noopener">nexora-video-factory · nexora-remotion · lottie-hub · SFX/logo/icon packs</a></span><span class="as">◆ Repositories</span></li>
-        <li data-cat="code"><span class="an">Mobile &amp; app starters</span><span class="ad"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=todo" rel="noopener">Flutter · Dart · Kotlin · C++ starter projects</a></span><span class="as">◆ Repositories</span></li>
-        <li data-cat="code"><span class="an">ein-el-arab</span><span class="ad"><a href="https://github.com/nexora-01-eg/ein-el-arab" rel="noopener">AI image-sorting skill/tool</a></span><span class="as">◆ Repository</span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">Template Library</span><span class="t-ar">مكتبة القوالب</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg/template-library" rel="noopener">53 researched templates, 15 categories, verification logs</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg/template-library" rel="noopener">53 قالبًا مدروسًا، 15 فئة، سجلات تحقق</a></span></span><span class="as"><span class="t-en">◆ Repository</span><span class="t-ar">◆ مستودع</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">Rollz restaurant system</span><span class="t-ar">نظام Rollz</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg/rollz-restaurant" rel="noopener">TypeScript + Drizzle codebase &amp; roadmap</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg/rollz-restaurant" rel="noopener">قاعدة TypeScript + Drizzle وخارطة طريق</a></span></span><span class="as"><span class="t-en">◆ Repository</span><span class="t-ar">◆ مستودع</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">she-website</span><span class="t-ar">she-website</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg/she-website" rel="noopener">Next.js + Supabase storefront codebase</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg/she-website" rel="noopener">قاعدة متجر Next.js + Supabase</a></span></span><span class="as"><span class="t-en">◆ Repository</span><span class="t-ar">◆ مستودع</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">MR demo collections</span><span class="t-ar">مجموعات MR التجريبية</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=mr-demos" rel="noopener">Food · medical · beauty · education · logistics · misc</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=mr-demos" rel="noopener">طعام · طبي · جمال · تعليم · لوجستيات · متنوع</a></span></span><span class="as"><span class="t-en">◆ Repositories</span><span class="t-ar">◆ مستودعات</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">Web demo collections</span><span class="t-ar">مجموعات الويب التجريبية</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=demos" rel="noopener">web-demos · threeui-demos · ar-demos · html-games · web-clones · drafts</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=demos" rel="noopener">web-demos · threeui-demos · ar-demos · html-games · web-clones</a></span></span><span class="as"><span class="t-en">◆ Repositories</span><span class="t-ar">◆ مستودعات</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">Arsenal collections</span><span class="t-ar">مجموعات Arsenal</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=arsenal" rel="noopener">Demos · toolkit · gallery · audit</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=arsenal" rel="noopener">ديموهات · أدوات · جاليري · تدقيق</a></span></span><span class="as"><span class="t-en">◆ Repositories</span><span class="t-ar">◆ مستودعات</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">AI agent experiments</span><span class="t-ar">تجارب وكلاء الذكاء الاصطناعي</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=agent" rel="noopener">Orchestrator · task manager · test orchestrator (Python)</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=agent" rel="noopener">منسّق وكلاء · مدير مهام · منسّق اختبارات (Python)</a></span></span><span class="as"><span class="t-en">◆ Repositories</span><span class="t-ar">◆ مستودعات</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">Dev tools &amp; scripts</span><span class="t-ar">أدوات وسكربتات التطوير</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=tools" rel="noopener">qaima-tools · dev-scripts · cf-live-test · n8n-automation</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=tools" rel="noopener">qaima-tools · dev-scripts · cf-live-test · n8n-automation</a></span></span><span class="as"><span class="t-en">◆ Repositories</span><span class="t-ar">◆ مستودعات</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">Video &amp; motion assets</span><span class="t-ar">أصول الفيديو والحركة</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=pack" rel="noopener">nexora-video-factory · nexora-remotion · lottie-hub · SFX/logo/icon packs</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=pack" rel="noopener">nexora-video-factory · nexora-remotion · lottie-hub · حزم</a></span></span><span class="as"><span class="t-en">◆ Repositories</span><span class="t-ar">◆ مستودعات</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">Mobile &amp; app starters</span><span class="t-ar">مشاريع موبايل وتطبيقات</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=todo" rel="noopener">Flutter · Dart · Kotlin · C++ starter projects</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg?tab=repositories&amp;q=todo" rel="noopener">مشاريع بداية Flutter · Dart · Kotlin · C++</a></span></span><span class="as"><span class="t-en">◆ Repositories</span><span class="t-ar">◆ مستودعات</span></span></li>
+        <li data-cat="code"><span class="an"><span class="t-en">ein-el-arab</span><span class="t-ar">ein-el-arab</span></span><span class="ad"><span class="t-en"><a href="https://github.com/nexora-01-eg/ein-el-arab" rel="noopener">AI image-sorting skill/tool</a></span><span class="t-ar"><a href="https://github.com/nexora-01-eg/ein-el-arab" rel="noopener">مهارة/أداة فرز صور بالذكاء الاصطناعي</a></span></span><span class="as"><span class="t-en">◆ Repository</span><span class="t-ar">◆ مستودع</span></span></li>
       </ul>
-      <p class="archive-empty" id="archive-empty" hidden>No projects in this category.</p>
+      <p class="archive-empty" id="archive-empty" hidden><span class="t-en">No projects in this category.</span><span class="t-ar">لا توجد مشاريع في هذه الفئة.</span></p>
 
       <p class="archive-foot">
-        Concept demos use fictional brands and placeholder data and are labeled as such. Nothing on
+        <span class="t-en">Concept demos use fictional brands and placeholder data and are labeled as such. Nothing on
         this page claims real clients, revenue, user counts, or metrics. Statuses were verified
-        October 2026; a few free hosts can be slow or pause deployments.
+        October 2026; a few free hosts can be slow or pause deployments.</span>
+        <span class="t-ar">العروض المفاهيمية تستخدم علامات خيالية وبيانات وهمية وهي مُعلَّمة كذلك. لا شيء في هذه
+        الصفحة يدّعي عملاء حقيقيين أو إيرادات أو أعداد مستخدمين أو مقاييس. تم التحقق من الحالات في
+        أكتوبر 2026؛ وبعض المستضيفين المجانيين قد يكون بطيئًا أو يوقف النشر مؤقتًا.</span>
       </p>
     </div>
   </section>
@@ -520,12 +880,19 @@
 
 <footer class="footer">
   <div class="wrap">
-    <span>© 2026 Mohamed Sadek</span>
-    <span><a href="mailto:mohamed_sadek07@outlook.com">Email</a> · <a href="https://github.com/nexora-01-eg" rel="noopener">GitHub</a> · <a href="downloads/Mohamed-Sadek-ATS-Resume.pdf">Résumé PDF</a></span>
+    <span><span class="t-en">© 2026 Mohamed Sadek</span><span class="t-ar">© 2026 محمد صادق</span></span>
+    <span><a href="mailto:mohamed_sadek07@outlook.com"><span class="t-en">Email</span><span class="t-ar">بريد</span></a> · <a href="https://github.com/nexora-01-eg" rel="noopener"><span class="t-en">GitHub</span><span class="t-ar">جيت هب</span></a> · <a href="downloads/Mohamed-Sadek-ATS-Resume.pdf"><span class="t-en">Résumé PDF</span><span class="t-ar">السيرة PDF</span></a></span>
     <span class="fine">
-      Built with AI-assisted workflows. All projects and skills on this page were verified against
-      live sites, repositories, or project files in October 2026. Résumé files: ATS version and
-      full portfolio CV, both printable.
+      <span class="t-en">
+        Built with AI-assisted workflows. All projects and skills on this page were verified against
+        live sites, repositories, or project files in October 2026. Résumé files: ATS version and
+        full portfolio CV, both printable.
+      </span>
+      <span class="t-ar">
+        بُني بمسارات عمل بمساعدة الذكاء الاصطناعي. كل المشاريع والمهارات في هذه الصفحة تم التحقق
+        منها مقابل مواقع مباشرة أو مستودعات أو ملفات مشاريع في أكتوبر 2026. ملفات السيرة: نسخة
+        مختصرة ونسخة كاملة، وكلاهما قابل للطباعة.
+      </span>
     </span>
   </div>
 </footer>
