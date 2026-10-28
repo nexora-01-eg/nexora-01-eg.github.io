@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Sadek — Résumé (ATS)</title>
+<meta name="description" content="ATS-friendly résumé of Mohamed Sadek — AI-assisted digital project builder, websites and digital operations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  /* ATS résumé — single column, no tables for layout, no graphics, no skill bars */
+  :root {
+    --ink: #1a1a1a; --soft: #3d3d3d; --navy: #16263d; --muted: #565656;
+    --line: #b9b2a4; --sans: "Inter","Segoe UI",Arial,sans-serif; --serif: "Source Serif 4",Georgia,serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--ink); font-size: 10.5pt; line-height: 1.5; background: #fff; }
+  .page { max-width: 790px; margin: 0 auto; padding: 34px 40px; }
+
+  header.rh { text-align: left; border-bottom: 2.5px solid var(--navy); padding-bottom: 12px; margin-bottom: 16px; }
+  header.rh h1 { font-family: var(--serif); font-size: 24pt; letter-spacing: 0.5px; color: var(--ink); }
+  header.rh .headline { font-size: 11.5pt; color: var(--navy); font-weight: 600; margin-top: 2px; }
+  header.rh .contact { margin-top: 7px; font-size: 9.5pt; color: var(--soft); overflow-wrap: break-word; }
+  header.rh .contact span.sep { color: var(--line); margin: 0 7px; }
+  header.rh .contact a { color: var(--soft); text-decoration: none; }
+
+  h2 { font-family: var(--serif); font-size: 11.5pt; letter-spacing: 1.4px; text-transform: uppercase;
+       color: var(--navy); border-bottom: 1px solid var(--line); padding-bottom: 3px; margin: 18px 0 8px; }
+
+  p.sum { color: var(--soft); }
+  .cols { display: grid; grid-template-columns: 1fr; gap: 4px 24px; }
+  .skills p { margin-bottom: 5px; color: var(--soft); }
+  .skills p strong { color: var(--ink); font-weight: 600; }
+
+  .job, .proj { margin-bottom: 10px; break-inside: avoid; }
+  .proj .row1 { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .proj h3 { font-size: 10.5pt; font-weight: 700; color: var(--ink); }
+  .proj .meta { font-size: 9pt; color: var(--muted); white-space: nowrap; }
+  .proj p.role { font-size: 9.5pt; color: var(--muted); font-style: italic; margin-top: 1px; }
+  ul.b { margin: 4px 0 2px 16px; }
+  ul.b li { margin-bottom: 3px; color: var(--soft); font-size: 10pt; }
+  ul.b li strong { color: var(--ink); font-weight: 600; }
+  .proj .link { font-size: 9pt; color: var(--navy); word-break: break-all; }
+
+  .edu .row1 { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .edu h3 { font-size: 10.5pt; font-weight: 700; }
+  .edu .meta { font-size: 9.5pt; color: var(--muted); white-space: nowrap; }
+  .edu p.d { color: var(--soft); font-size: 10pt; }
+  .lang p { color: var(--soft); }
+
+  footer.note { margin-top: 16px; padding-top: 8px; border-top: 1px solid var(--line);
+                font-size: 8.5pt; color: var(--muted); }
+
+  @page { size: A4; margin: 0; }
+  @media print { body { font-size: 10pt; } .page { padding: 26px 34px; } a { color: inherit; } }
+  @media (max-width: 640px) { .page { padding: 22px 18px; } .proj .row1 { flex-wrap: wrap; } }
+  .no-print { margin: 14px auto 0; display: block; width: max-content; }
+  .no-print a { font: 600 10pt var(--sans); color: #fff; background: var(--navy); padding: 9px 18px; border-radius: 4px; text-decoration: none; }
+  @media print { .no-print { display: none; } }
+</style>
+</head>
+<body>
+<div class="page" id="content">
+
+  <header class="rh">
+    <h1>MOHAMED SADEK</h1>
+    <p class="headline">AI-Assisted Digital Project Builder — Websites &amp; Digital Operations</p>
+    <p class="contact">
+      Shebin El-Kom, Menoufia, Egypt
+      <span class="sep">|</span> 01000025168
+      <span class="sep">|</span> <a href="mailto:mohamed_sadek07@outlook.com">mohamed_sadek07@outlook.com</a>
+      <span class="sep">|</span> <a href="https://github.com/nexora-01-eg">github.com/nexora-01-eg</a>
+      <span class="sep">|</span> <a href="https://nexora-01-eg.github.io/">nexora-01-eg.github.io</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="sum">
+      Builder of complete web projects — brand sites, digital menus and ordering flows, and
+      storefronts — planned, built, tested, and documented through AI-assisted workflows I set up
+      myself. Strongest work to date: a coffee-brand ordering platform (live storefront plus a
+      Cloudflare Workers API with authentication, rate limiting, and a 33-assertion integration
+      test suite). Undergraduate in Economics and Political Science (Cairo University, expected
+      2027), seeking a junior role in website administration, digital operations, content, or
+      data work.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <p><strong>Web building:</strong> HTML, CSS, JavaScript (vanilla-first), responsive Arabic/RTL layouts, single-file and template-based site production.</p>
+      <p><strong>Frameworks &amp; stacks:</strong> React, TypeScript, Vite, Three.js (3D scenes, GLSL shaders), Next.js with Supabase, GSAP + ScrollTrigger + Lenis motion.</p>
+      <p><strong>Backend &amp; data:</strong> Cloudflare Workers (Hono), D1/SQLite, Zod validation, Drizzle ORM, SQL migrations and seed data, REST APIs, PBKDF2/HMAC session authentication.</p>
+      <p><strong>Quality:</strong> integration and end-to-end test suites, project audits, readiness reports, QA documentation, link/content verification.</p>
+      <p><strong>AI workflows:</strong> AI-assisted development with OpenCode, Codex, Claude, Cursor, and Manus; prompt-driven planning, building, review, and iteration.</p>
+      <p><strong>Operations:</strong> deployment to GitHub Pages, Vercel, and Cloudflare; asset optimization (WebP); template reuse across 13+ sites; content organization; online research and tool evaluation.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <p style="font-size:9.5pt;color:var(--muted);margin-bottom:8px;">All projects built independently with AI-assisted workflows, 2026. Live links verified at publication.</p>
+
+    <div class="proj">
+      <div class="row1"><h3>AL-Diwan Coffee — Ordering Platform (Storefront + API)</h3><span class="meta">Live · nexora-01-eg.github.io/al-diwan-coffee</span></div>
+      <ul class="b">
+        <li>Built a cinematic Arabic storefront (Three.js, GSAP, Lenis) with cart and WhatsApp checkout, then audited its gaps in a written report.</li>
+        <li>Built the missing backend: Cloudflare Workers API (Hono + D1 + Zod) with admin dashboard, order tracking, idempotency, and stock handling.</li>
+        <li>Implemented security controls: PBKDF2 password hashing, HMAC session cookies, rate limiting, CSRF protection.</li>
+        <li>Wrote and ran a 33-assertion integration suite plus a 10-step end-to-end order journey; documented readiness and QA in 9 project files.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="row1"><h3>SHE — Live Fashion Store (she.shoes)</h3><span class="meta">Live · she.shoes</span></div>
+      <ul class="b">
+        <li>Runs a real-domain storefront for a women's shoes and bags boutique, Arabic RTL with cash-on-delivery flow.</li>
+        <li>Built a Next.js 15 + Supabase codebase with product pages, checkout, orders, and admin; added build guards and seed verification scripts.</li>
+        <li>Produced a storyboard-driven promo video (1080×1920) for the store.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="row1"><h3>NEXORA — Digital Services Platform Site</h3><span class="meta">Live · nexora01eg.vercel.app</span></div>
+      <ul class="b">
+        <li>Designed and deployed the platform site presenting identity, websites, marketing, and automation as one growth system.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="row1"><h3>Nexora Client Sites — Small-Business Website Production</h3><span class="meta">13+ sites · github.com/nexora-01-eg/nexora-client-sites</span></div>
+      <ul class="b">
+        <li>Produced 13+ small-business sites (gyms, furniture, spa, halls, offices, real estate) from a reusable template core, with before/after comparisons.</li>
+        <li>Maintained the template core with built-in reduced-motion support and one-file re-branding.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="row1"><h3>Rollz Restaurant System</h3><span class="meta">Live demos · TypeScript codebase</span></div>
+      <ul class="b">
+        <li>Built a typed restaurant-system codebase (TypeScript, Drizzle ORM) with research notes and a 50-item development roadmap.</li>
+        <li>Shipped three live ordering surfaces: interactive QR menu, brand site, and fries menu — all converting to WhatsApp orders.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="row1"><h3>Mohamed Sadek Atlas — Personal OS</h3><span class="meta">github.com/nexora-01-eg/mohamed-sadek-atlas</span></div>
+      <ul class="b">
+        <li>Built a zero-dependency interactive self-portrait (personal OS × mind map) with a JSON data architecture separating public and private layers.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="edu">
+    <h2>Education</h2>
+    <div class="proj">
+      <div class="row1"><h3>Faculty of Economics and Political Science — Cairo University</h3><span class="meta">Expected graduation 2027</span></div>
+      <p class="d">Undergraduate student. Independent web project work alongside studies, from Shebin El-Kom, Egypt.</p>
+    </div>
+  </section>
+
+  <section class="lang">
+    <h2>Languages</h2>
+    <p>Arabic — native &nbsp;·&nbsp; English — B1 (self-assessed)</p>
+  </section>
+
+  <footer class="note">
+    Everything above is backed by inspectable evidence: live sites, public repositories, or project
+    files (verified October 2026). No employment history is claimed; projects are independent builds.
+  </footer>
+
+</div>
+<p class="no-print"><a href="#" onclick="window.print();return false;">Print / Save as PDF</a></p>
+</body>
+</html>
