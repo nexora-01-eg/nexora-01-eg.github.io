@@ -321,6 +321,11 @@ footer a:hover{color:var(--gold)}
 </a>
 
 <script>
+/* ===== PRELOADER HIDE — registered FIRST so nothing can block it ===== */
+const hidePl=()=>document.getElementById("preloader").classList.add("done");
+addEventListener("load",()=>setTimeout(hidePl,650));
+setTimeout(hidePl,2500);
+
 /* ============================================================
    قالب معرض الأعمال — ➕ لإضافة عمل جديد: انسخ كائنًا داخل WORKS
    وعدّل الحقول فقط. الفلترة والعرض تلقائيان.
@@ -393,8 +398,13 @@ const MQ = ["<b>13+</b> موقع عميل حي","<b>53</b> قالب متحقق",
 document.getElementById("mq").innerHTML = [...MQ,...MQ,...MQ,...MQ].map(x=>`<span>${x}</span>`).join("");
 
 /* ===== REVEAL ===== */
-const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
-function observeAll(){document.querySelectorAll(".rv:not(.in)").forEach(el=>io.observe(el));}
+var io=null;
+function observeAll(){
+  if(!io){
+    io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+  }
+  document.querySelectorAll(".rv:not(.in)").forEach(el=>io.observe(el));
+}
 observeAll();
 
 /* ===== NAV SOLID + PROGRESS ===== */
@@ -435,9 +445,7 @@ addEventListener("scroll",()=>{
   else{size();draw();}
 })();
 
-/* ===== PRELOADER + YEAR ===== */
-addEventListener("load",()=>setTimeout(()=>document.getElementById("preloader").classList.add("done"),650));
-setTimeout(()=>document.getElementById("preloader").classList.add("done"),2500);
+/* ===== YEAR ===== */
 document.getElementById("yr").textContent=new Date().getFullYear();
 </script>
 </body>
